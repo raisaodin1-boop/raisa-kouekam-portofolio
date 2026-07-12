@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: seoDefaults.metadataBase,
   applicationName: siteConfig.name,
   description:
-    "Full Stack Software Engineer — 15+ projects delivered in production. Bilingual EN/FR portfolio.",
+    "Full Stack Software Engineer — Yorix & HODIX live in production. Bilingual EN/FR portfolio.",
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: [{ url: "/icon.svg", type: "image/svg+xml" }],
@@ -44,7 +44,7 @@ export default async function RootLayout({
       <head>
         <meta
           name="description"
-          content="Full Stack Software Engineer — 15+ projects delivered in production (Yorix, HODIX). Bilingual EN/FR. Open to international remote roles."
+          content="Full Stack Software Engineer — Yorix & HODIX live in production. Bilingual EN/FR. Open to international remote roles."
         />
       </head>
       <body className={`${inter.variable} min-h-screen antialiased`}>

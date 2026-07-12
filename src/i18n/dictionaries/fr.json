@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Raisa Kouekam — Ingénieure Full Stack",
-    "description": "Ingénieure Full Stack — 15+ projets livrés en production (Yorix, HODIX). Bilingue EN/FR. Ouverte aux postes internationaux en remote.",
+    "description": "Ingénieure Full Stack — Yorix & HODIX en production. Bilingue EN/FR. Ouverte aux postes internationaux en remote.",
     "skipToContent": "Aller au contenu principal"
   },
   "a11y": {
@@ -31,7 +31,7 @@
   "home": {
     "greeting": "Ingénieure Full Stack",
     "name": "Raisa Kouekam",
-    "subtitle": "J'ai conçu, développé et livré 15+ applications web en production — dont des marketplaces e-commerce et des plateformes fintech comme Yorix et HODIX — pour un impact business concret.",
+    "subtitle": "Je conçois, développe et déploie des applications web en production — dont la marketplace live Yorix et la plateforme fintech HODIX — pour un impact business concret et mesurable.",
     "badge": "Disponible pour des opportunités internationales",
     "highlights": [
       "Développement Full Stack",
@@ -42,12 +42,12 @@
     ],
     "metrics": [
       {
-        "value": "15+",
-        "label": "Projets livrés"
+        "value": "2",
+        "label": "Produits live"
       },
       {
-        "value": "E-commerce & Fintech",
-        "label": "Domaines clés"
+        "value": "Stripe & Mobile Money",
+        "label": "Paiements intégrés"
       },
       {
         "value": "EN / FR",
@@ -67,7 +67,7 @@
     "featuredSubtitle": "Produits en production — marketplaces, fintech et logiciels métier — conçus de bout en bout avec des technologies web modernes.",
     "viewAllProjects": "Voir tous les projets",
     "aboutTitle": "À propos",
-    "aboutText": "Ingénieure Full Stack et fondatrice de Yorix Digital Group. Avec 15+ projets livrés en production, je conçois des marketplaces, fintech et logiciels métier — de la conception UI à l'architecture et au déploiement.",
+    "aboutText": "Ingénieure Full Stack et fondatrice de Yorix Digital Group. Je livre des produits en production — Yorix Marketplace et HODIX Fintech — ainsi que des logiciels métier internes, de la conception UI à l'architecture et au déploiement.",
     "learnMore": "Profil complet de Raisa Kouekam",
     "skillsTitle": "Expertise technique",
     "skillsSubtitle": "Un profil équilibré entre frontend, backend, cloud et outils.",
@@ -86,7 +86,7 @@
     "paragraphs": [
       "Je suis Ingénieure Full Stack, passionnée par la création d'applications web modernes et de produits digitaux qui apportent une valeur concrète aux utilisateurs et aux entreprises.",
       "Je conçois des solutions complètes — des interfaces intuitives à une architecture backend robuste et une gestion réfléchie des bases de données — en veillant à ce que chaque couche fonctionne en harmonie.",
-      "Mon expérience inclut 15+ projets livrés en production — plateformes comme Yorix Marketplace et HODIX Fintech, ainsi que des logiciels métier internes — en transformant des exigences complexes en produits fiables.",
+      "Mon expérience inclut la mise en production de plateformes live — Yorix Marketplace et HODIX Fintech — ainsi que des logiciels métier internes, en transformant des exigences complexes en produits fiables.",
       "Je crois en l'apprentissage continu, à l'écriture de code propre, à la collaboration efficace au sein des équipes et à la construction de logiciels conçus pour créer de la valeur à long terme."
     ],
     "highlights": [
@@ -233,8 +233,8 @@
     "achievementsTitle": "Réalisations clés",
     "achievements": [
       {
-        "value": "15+",
-        "label": "Projets livrés"
+        "value": "2",
+        "label": "Produits live"
       },
       {
         "value": "E-commerce & Fintech",
