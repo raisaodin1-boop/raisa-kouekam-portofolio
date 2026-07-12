@@ -1,3 +1,4 @@
+import { HodixProjectPreview } from "@/components/projects/HodixProjectPreview";
 import { ProjectImagePlaceholder } from "@/components/projects/ProjectImagePlaceholder";
 import { Badge } from "@/components/ui/Badge";
 import { LinkButton } from "@/components/ui/LinkButton";
@@ -13,6 +14,7 @@ type ProjectCardProps = {
   githubUrl: string;
   gradient: string;
   icon?: LucideIcon;
+  preview?: "hodix";
   labels: {
     liveDemo: string;
     github: string;
@@ -30,15 +32,20 @@ export function ProjectCard({
   githubUrl,
   gradient,
   icon,
+  preview,
   labels,
 }: ProjectCardProps) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white card-shadow transition-all duration-300 hover:-translate-y-1 hover:card-shadow-hover">
-      <ProjectImagePlaceholder
-        title={title}
-        gradient={gradient}
-        icon={icon}
-      />
+      {preview === "hodix" ? (
+        <HodixProjectPreview />
+      ) : (
+        <ProjectImagePlaceholder
+          title={title}
+          gradient={gradient}
+          icon={icon}
+        />
+      )}
 
       <div className="flex flex-1 flex-col p-6 sm:p-7">
         <h3 className="text-xl font-semibold text-dark transition-colors group-hover:text-primary">

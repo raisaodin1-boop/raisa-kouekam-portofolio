@@ -44,6 +44,7 @@ export function ProjectsContent({ dict }: ProjectsContentProps) {
                 githubUrl={data.githubUrl}
                 gradient={data.gradient}
                 icon={projectIcons[key]}
+                preview={data.preview}
                 labels={{
                   liveDemo: dict.projects.liveDemo,
                   github: dict.projects.github,

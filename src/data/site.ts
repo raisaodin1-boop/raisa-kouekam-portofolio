@@ -54,6 +54,7 @@ export const projectsData: Record<
     liveUrl: string;
     githubUrl: string;
     gradient: string;
+    preview?: "hodix";
   }
 > = {
   yorix: {
@@ -71,16 +72,17 @@ export const projectsData: Record<
   },
   hodix: {
     techStack: [
-      "React",
+      "React Native",
+      "Expo",
+      "Supabase",
       "TypeScript",
-      "Node.js",
-      "MongoDB",
-      "Plaid API",
-      "Docker",
+      "Vercel",
+      "Mobile Money",
     ],
-    liveUrl: "#",
-    githubUrl: "#",
-    gradient: "from-indigo-500/25 via-purple-500/10 to-blue-500/20",
+    liveUrl: "https://www.hodix.app",
+    githubUrl: "",
+    gradient: "from-[#0f2e24] to-[#1a4d3e]",
+    preview: "hodix",
   },
   portfolio: {
     techStack: [

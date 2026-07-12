@@ -100,13 +100,14 @@
         ]
       },
       "hodix": {
-        "title": "Hodix Fintech",
-        "description": "Une plateforme fintech de gestion des finances personnelles — suivi des transactions, analytics budgétaires et intégrations bancaires sécurisées.",
+        "title": "HODIX Fintech",
+        "description": "La première super-app africaine de tontines digitales et d'identité financière vérifiable — transformant l'épargne communautaire informelle en réputation financière pour les marchés émergents et la diaspora.",
         "features": [
-          "Suivi et catégorisation des transactions en temps réel",
-          "Tableaux de bord budgétaires et insights de dépenses",
-          "Connexion sécurisée de comptes bancaires via APIs financières",
-          "Accès par rôles avec chiffrement des données"
+          "Tontines digitales avec cycles automatisés, rappels et suivi des membres",
+          "Trust Score (0–1000) et niveaux d'identité — Bronze à Platinum",
+          "Certificats d'Identité Financière vérifiables (QR, hash, lien public)",
+          "Wallet multi-devises (XAF, EUR, USD) avec MTN & Orange Money",
+          "Console admin : membres, validation KYC et gestion des tontines"
         ]
       },
       "portfolio": {
