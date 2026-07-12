@@ -4,6 +4,12 @@ import { navbarItems } from "@/data/site";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { getLocalizedPath } from "@/lib/utils";
 
+type ResumeUrls = Record<Locale, string>;
+
+function getResumeUrl(locale: Locale, resumeUrls: ResumeUrls): string {
+  return resumeUrls[locale] ?? resumeUrls.en;
+}
+
 export function buildNavLabels(dict: Dictionary) {
   return Object.fromEntries(
     navbarItems.map((item) => [
@@ -21,13 +27,15 @@ export function isNavActive(pathname: string, href: string, locale: Locale): boo
   return pathname.startsWith(path);
 }
 
-export function getResumeHref(locale: Locale, resumeUrl: string): string {
+export function getResumeHref(locale: Locale, resumeUrls: ResumeUrls): string {
+  const resumeUrl = getResumeUrl(locale, resumeUrls);
   return isConfiguredUrl(resumeUrl)
     ? resumeUrl
     : getLocalizedPath("/contact", locale);
 }
 
-export function getResumeLinkProps(resumeUrl: string) {
+export function getResumeLinkProps(locale: Locale, resumeUrls: ResumeUrls) {
+  const resumeUrl = getResumeUrl(locale, resumeUrls);
   if (!isConfiguredUrl(resumeUrl)) {
     return { external: false as const, download: undefined };
   }
@@ -38,6 +46,9 @@ export function getResumeLinkProps(resumeUrl: string) {
 
   return {
     external: false as const,
-    download: "Raisa-Kouekam-Resume.pdf",
+    download:
+      locale === "fr"
+        ? "Raisa-Kouekam-CV.pdf"
+        : "Raisa-Kouekam-Resume.pdf",
   };
 }

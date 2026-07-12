@@ -21,8 +21,8 @@ const fadeUp = (delay = 0, visible = false) => ({
 });
 
 export function Hero({ locale, dict }: HeroProps) {
-  const resumeHref = getResumeHref(locale, siteConfig.resumeUrl);
-  const resumeLink = getResumeLinkProps(siteConfig.resumeUrl);
+  const resumeHref = getResumeHref(locale, siteConfig.resumeUrls);
+  const resumeLink = getResumeLinkProps(locale, siteConfig.resumeUrls);
 
   return (
     <section
