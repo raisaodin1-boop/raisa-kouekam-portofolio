@@ -68,6 +68,7 @@ export const projectsData: Record<
     githubUrl: string;
     gradient: string;
     coverImage?: string;
+    galleryImages?: string[];
   }
 > = {
   yorix: {
@@ -83,6 +84,11 @@ export const projectsData: Record<
     githubUrl: siteConfig.github,
     gradient: "from-blue-500/25 via-primary/10 to-teal-500/20",
     coverImage: "/projects/yorix/cover.png",
+    galleryImages: [
+      "/projects/yorix/screen-1.png",
+      "/projects/yorix/screen-2.png",
+      "/projects/yorix/screen-3.png",
+    ],
   },
   hodix: {
     techStack: [
@@ -97,6 +103,12 @@ export const projectsData: Record<
     githubUrl: siteConfig.github,
     gradient: "from-[#0f2e24] to-[#1a4d3e]",
     coverImage: "/projects/hodix/cover.png",
+    galleryImages: [
+      "/projects/hodix/screen-1.png",
+      "/projects/hodix/screen-2.png",
+      "/projects/hodix/screen-3.png",
+      "/projects/hodix/screen-4.png",
+    ],
   },
   digitalGroup: {
     techStack: [
@@ -139,6 +151,13 @@ export const navbarItems = [
 ] as const;
 
 export const featuredProjectKeys: ProjectKey[] = ["yorix", "hodix"];
+
+export const caseStudySlugs = ["yorix", "hodix"] as const satisfies readonly ProjectKey[];
+export type CaseStudySlug = (typeof caseStudySlugs)[number];
+
+export function isCaseStudySlug(slug: string): slug is CaseStudySlug {
+  return (caseStudySlugs as readonly string[]).includes(slug);
+}
 
 export const previewSkillKeys = [
   "frontend",

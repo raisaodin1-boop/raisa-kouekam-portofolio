@@ -16,7 +16,8 @@
     "experienceTimeline": "Professional experience timeline",
     "skillCategories": "Skill categories",
     "formErrorSummary": "Please fix the errors below before submitting.",
-    "socialLinks": "Social links"
+    "socialLinks": "Social links",
+    "coreValues": "Core values"
   },
   "nav": {
     "home": "Home",
@@ -62,6 +63,8 @@
     "scrollIndicator": "Scroll down",
     "profilePhotoLabel": "Raisa Kouekam — professional portrait",
     "downloadResume": "Download Resume",
+    "emailMe": "Email Me",
+    "connectLinkedIn": "Connect on LinkedIn",
     "viewProjects": "View Projects",
     "featuredTitle": "Selected Work",
     "featuredSubtitle": "Live production products — marketplaces, fintech and business software — built end-to-end with modern web technologies.",
@@ -129,6 +132,11 @@
         "Continuous learning with pragmatic, results-driven innovation",
         "User-centered design paired with engineering excellence"
       ]
+    },
+    "whatsapp": {
+      "title": "Let's Talk",
+      "description": "Have a quick question or want to discuss an opportunity? Reach me directly on WhatsApp — I typically respond within 24 hours.",
+      "button": "Chat on WhatsApp"
     }
   },
   "skills": {
@@ -179,9 +187,19 @@
     "subtitle": "Products and platforms I've designed and built — from architecture to deployment.",
     "liveDemo": "Live Demo",
     "github": "GitHub",
+    "viewCaseStudy": "View Case Study",
+    "backToProjects": "Back to Projects",
     "coverAltSuffix": "project screenshot",
     "features": "Key Features",
     "techStack": "Technologies",
+    "caseStudy": {
+      "overview": "Overview",
+      "role": "My Role",
+      "challenge": "The Challenge",
+      "solution": "The Solution",
+      "outcomes": "Outcomes",
+      "gallery": "Product Screenshots"
+    },
     "items": {
       "yorix": {
         "title": "Yorix Marketplace",
@@ -191,7 +209,21 @@
           "Secure checkout with Stripe payment integration",
           "Advanced product search, filters and categories",
           "Order tracking and automated email notifications"
-        ]
+        ],
+        "caseStudy": {
+          "metaDescription": "Case study: Yorix Marketplace — multi-vendor e-commerce platform built with Next.js, Stripe and PostgreSQL for the Cameroon market.",
+          "overview": "Yorix Marketplace is a production multi-vendor e-commerce platform I built end-to-end for Yorix Digital Group, connecting buyers and sellers across Cameroon with secure payments, vendor tools and real-time inventory management.",
+          "role": "Founder & Lead Developer — product strategy, UX/UI design, full stack development, database architecture, Stripe integration, deployment and ongoing maintenance.",
+          "challenge": "Build a scalable marketplace where multiple vendors can manage catalogs, inventory and orders independently, while giving buyers a unified, trustworthy shopping experience with secure online payments in a market still adapting to e-commerce.",
+          "solution": "Architected a Next.js application with TypeScript and PostgreSQL, implementing role-based vendor dashboards, Stripe checkout, advanced product search with filters, automated order notifications and a responsive storefront optimized for mobile-first users.",
+          "outcomes": [
+            "Live production platform at yorix.cm serving real vendors and customers",
+            "Multi-vendor architecture with independent seller dashboards and catalog management",
+            "Stripe payment integration for secure checkout",
+            "SEO-optimized storefront with responsive design across devices"
+          ],
+          "galleryAltSuffix": "screenshot"
+        }
       },
       "hodix": {
         "title": "HODIX Fintech",
@@ -202,7 +234,21 @@
           "Verifiable Financial Identity certificates with QR, hash and public link",
           "Multi-currency wallet (XAF, EUR, USD) with MTN & Orange Money integration",
           "Admin console for members, KYC validation and tontine management"
-        ]
+        ],
+        "caseStudy": {
+          "metaDescription": "Case study: HODIX Fintech — digital tontines, Trust Score and mobile money super-app for emerging markets and the diaspora.",
+          "overview": "HODIX is a fintech super-app I'm building for digital tontines, verifiable financial identity and multi-currency wallets — transforming informal community savings into trusted financial reputation for emerging markets and the diaspora.",
+          "role": "Full Stack Developer — product design, mobile and web development, Supabase backend, payment integrations (MTN & Orange Money), admin tooling and deployment.",
+          "challenge": "Digitize traditional African tontines (rotating savings groups) while building verifiable financial identity, trust scoring and mobile money payments in markets with low formal banking penetration.",
+          "solution": "Built with React Native, Expo and Supabase, implementing automated tontine cycles, a 0–1000 Trust Score with tiered identity levels, VFI certificates with QR verification, multi-currency wallets and an admin console for KYC and member management.",
+          "outcomes": [
+            "Live platform at hodix.app with digital tontine management",
+            "Trust Score system with Bronze to Platinum identity tiers",
+            "Verifiable Financial Identity certificates with public verification",
+            "MTN & Orange Money integration for XAF, EUR and USD wallets"
+          ],
+          "galleryAltSuffix": "screenshot"
+        }
       },
       "portfolio": {
         "title": "Personal Portfolio",
@@ -332,7 +378,8 @@
       "github": "GitHub",
       "linkedin": "LinkedIn",
       "portfolio": "Portfolio",
-      "email": "Email"
+      "email": "Email",
+      "whatsapp": "WhatsApp"
     },
     "cta": {
       "title": "Interested in working together?",

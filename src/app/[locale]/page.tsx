@@ -26,7 +26,7 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
-      <Hero locale={locale as Locale} dict={dict} />
+      <Hero dict={dict} />
       <HomeMetrics
         metrics={dict.home.metrics}
         ariaLabel={dict.a11y.keyHighlights}

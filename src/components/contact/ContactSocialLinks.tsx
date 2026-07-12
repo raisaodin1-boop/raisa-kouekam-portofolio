@@ -2,7 +2,7 @@
 
 import { siteConfig, isConfiguredUrl } from "@/data/site";
 import { cn } from "@/lib/utils";
-import { GitBranch, Globe, Mail, Share2, type LucideIcon } from "lucide-react";
+import { GitBranch, Globe, Mail, MessageCircle, Share2, type LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
 type ContactSocialLinksProps = {
@@ -11,6 +11,7 @@ type ContactSocialLinksProps = {
     linkedin: string;
     portfolio: string;
     email: string;
+    whatsapp: string;
   };
   sectionLabel: string;
 };
@@ -59,6 +60,17 @@ export function ContactSocialLinks({
       icon: Mail,
       label: labels.email,
     },
+    ...(isConfiguredUrl(siteConfig.whatsapp)
+      ? [
+          {
+            key: "whatsapp",
+            href: siteConfig.whatsapp,
+            icon: MessageCircle,
+            label: labels.whatsapp,
+            external: true,
+          },
+        ]
+      : []),
   ];
 
   return (

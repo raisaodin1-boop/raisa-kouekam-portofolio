@@ -4,11 +4,14 @@ import { ProjectCard } from "@/components/projects/ProjectCard";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { PageContainer } from "@/components/ui/PageContainer";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { projectKeys, projectsData, type ProjectKey } from "@/data/site";
+import { projectKeys, projectsData, isCaseStudySlug, type ProjectKey } from "@/data/site";
 import type { Dictionary } from "@/i18n/get-dictionary";
+import type { Locale } from "@/i18n/config";
+import { getLocalizedPath } from "@/lib/utils";
 import { Building2, Layout, ShoppingBag, Wallet, type LucideIcon } from "lucide-react";
 
 type ProjectsContentProps = {
+  locale: Locale;
   dict: Dictionary;
 };
 
@@ -19,7 +22,7 @@ const projectIcons: Record<ProjectKey, LucideIcon> = {
   portfolio: Layout,
 };
 
-export function ProjectsContent({ dict }: ProjectsContentProps) {
+export function ProjectsContent({ locale, dict }: ProjectsContentProps) {
   return (
     <PageContainer as="section" aria-labelledby="projects-page-heading">
       <AnimateIn>
@@ -48,12 +51,18 @@ export function ProjectsContent({ dict }: ProjectsContentProps) {
                 gradient={data.gradient}
                 coverImage={data.coverImage}
                 icon={projectIcons[key]}
+                caseStudyHref={
+                  isCaseStudySlug(key)
+                    ? getLocalizedPath(`/projects/${key}`, locale)
+                    : undefined
+                }
                 labels={{
                   liveDemo: dict.projects.liveDemo,
                   github: dict.projects.github,
                   coverAltSuffix: dict.projects.coverAltSuffix,
                   features: dict.projects.features,
                   techStack: dict.projects.techStack,
+                  viewCaseStudy: dict.projects.viewCaseStudy,
                 }}
               />
             </AnimateIn>

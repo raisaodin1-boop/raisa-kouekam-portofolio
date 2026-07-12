@@ -1,4 +1,4 @@
-import { siteConfig } from "@/data/site";
+import { caseStudySlugs, siteConfig } from "@/data/site";
 import { locales } from "@/i18n/config";
 import type { MetadataRoute } from "next";
 
@@ -14,6 +14,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: page === "" ? "weekly" : "monthly",
         priority: page === "" ? 1 : 0.8,
+      });
+    }
+
+    for (const slug of caseStudySlugs) {
+      entries.push({
+        url: `${siteConfig.url}/${locale}/projects/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.7,
       });
     }
   }

@@ -8,6 +8,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
   featuredProjectKeys,
   projectsData,
+  isCaseStudySlug,
   type ProjectKey,
 } from "@/data/site";
 import type { Dictionary } from "@/i18n/get-dictionary";
@@ -56,12 +57,18 @@ export function FeaturedProjects({ locale, dict }: FeaturedProjectsProps) {
                 coverImage={data.coverImage}
                 icon={projectIcons[key]}
                 imagePriority={index === 0}
+                caseStudyHref={
+                  isCaseStudySlug(key)
+                    ? getLocalizedPath(`/projects/${key}`, locale)
+                    : undefined
+                }
                 labels={{
                   liveDemo: dict.projects.liveDemo,
                   github: dict.projects.github,
                   coverAltSuffix: dict.projects.coverAltSuffix,
                   features: dict.projects.features,
                   techStack: dict.projects.techStack,
+                  viewCaseStudy: dict.projects.viewCaseStudy,
                 }}
               />
             </AnimateIn>

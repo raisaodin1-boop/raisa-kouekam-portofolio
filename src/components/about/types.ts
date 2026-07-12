@@ -3,6 +3,8 @@ export type AboutHighlight = {
   description: string;
 };
 
+export type AboutValue = string;
+
 export type AboutDictionary = {
   label: string;
   title: string;
@@ -13,4 +15,13 @@ export type AboutDictionary = {
   techStack: string[];
   portraitLabel: string;
   portraitCaption: string;
+  values: {
+    title: string;
+    items: AboutValue[];
+  };
+  whatsapp: {
+    title: string;
+    description: string;
+    button: string;
+  };
 };

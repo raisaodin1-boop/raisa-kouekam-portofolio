@@ -3,7 +3,7 @@ import { ProjectImagePlaceholder } from "@/components/projects/ProjectImagePlace
 import { Badge } from "@/components/ui/Badge";
 import { LinkButton } from "@/components/ui/LinkButton";
 import { isConfiguredUrl } from "@/data/site";
-import { ExternalLink, GitBranch, type LucideIcon } from "lucide-react";
+import { ExternalLink, GitBranch, FileText, type LucideIcon } from "lucide-react";
 
 type ProjectCardProps = {
   title: string;
@@ -22,7 +22,9 @@ type ProjectCardProps = {
     coverAltSuffix: string;
     features: string;
     techStack: string;
+    viewCaseStudy?: string;
   };
+  caseStudyHref?: string;
 };
 
 export function ProjectCard({
@@ -37,6 +39,7 @@ export function ProjectCard({
   icon,
   imagePriority = false,
   labels,
+  caseStudyHref,
 }: ProjectCardProps) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white card-shadow transition-all duration-300 hover:-translate-y-1 hover:card-shadow-hover">
@@ -99,11 +102,22 @@ export function ProjectCard({
         </div>
 
         <div className="mt-7 flex flex-wrap gap-3 border-t border-border pt-6">
+          {caseStudyHref && labels.viewCaseStudy && (
+            <LinkButton
+              href={caseStudyHref}
+              variant="primary"
+              className="text-sm"
+              aria-label={`${labels.viewCaseStudy} — ${title}`}
+            >
+              <FileText className="h-4 w-4" aria-hidden />
+              {labels.viewCaseStudy}
+            </LinkButton>
+          )}
           {isConfiguredUrl(liveUrl) && (
             <LinkButton
               href={liveUrl}
               external
-              variant="primary"
+              variant={caseStudyHref ? "outline" : "primary"}
               className="text-sm"
               aria-label={`${labels.liveDemo} — ${title}`}
             >
