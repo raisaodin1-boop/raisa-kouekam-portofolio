@@ -5,6 +5,7 @@ import { siteConfig } from "@/data/site";
 import type { ContactDictionary } from "@/components/contact/types";
 import { cn } from "@/lib/utils";
 import { AnimateIn } from "@/components/ui/AnimateIn";
+import { useForm, ValidationError } from "@formspree/react";
 import { useRef, useState } from "react";
 
 type ContactFormProps = {
@@ -27,9 +28,7 @@ const inputClassName = (hasError: boolean) =>
   );
 
 export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactFormProps) {
-  const [submitted, setSubmitted] = useState(false);
-  const [submitError, setSubmitError] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [state, formspreeSubmit] = useForm(siteConfig.formspreeFormId);
   const [errors, setErrors] = useState<FormErrors>({});
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -41,7 +40,7 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -60,41 +59,30 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
-      setSubmitted(false);
-      setSubmitError(false);
       focusFirstError(newErrors);
       return;
     }
 
     setErrors({});
-    setSubmitted(false);
-    setSubmitError(false);
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch(siteConfig.formspreeUrl, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, subject, message }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Formspree submission failed");
-      }
-
-      setSubmitted(true);
-      form.reset();
-    } catch {
-      setSubmitError(true);
-    } finally {
-      setIsSubmitting(false);
-    }
+    formspreeSubmit(e);
   };
 
   const hasErrors = Object.keys(errors).length > 0;
+  const hasFormspreeError = state.errors && !state.succeeded;
+
+  if (state.succeeded) {
+    return (
+      <AnimateIn direction="right" delay={0.15}>
+        <div
+          className="rounded-2xl border border-accent/20 bg-accent/10 p-6 text-sm text-dark sm:p-8"
+          role="status"
+          aria-live="polite"
+        >
+          {dict.success}
+        </div>
+      </AnimateIn>
+    );
+  }
 
   return (
     <AnimateIn direction="right" delay={0.15}>
@@ -112,11 +100,16 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
             </p>
           )}
 
-          {submitError && (
+          {hasFormspreeError && (
             <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">
               {dict.submitError}
             </p>
           )}
+
+          <ValidationError
+            errors={state.errors}
+            className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+          />
 
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-dark">
@@ -133,13 +126,19 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
               aria-invalid={!!errors.name}
               aria-describedby={errors.name ? "name-error" : undefined}
               className={inputClassName(!!errors.name)}
-              disabled={isSubmitting}
+              disabled={state.submitting}
             />
             {errors.name && (
               <p id="name-error" className="mt-1.5 text-xs text-red-500" role="alert">
                 {errors.name}
               </p>
             )}
+            <ValidationError
+              prefix=""
+              field="name"
+              errors={state.errors}
+              className="mt-1.5 text-xs text-red-500"
+            />
           </div>
 
           <div>
@@ -158,13 +157,19 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
               aria-invalid={!!errors.email}
               aria-describedby={errors.email ? "email-error" : undefined}
               className={inputClassName(!!errors.email)}
-              disabled={isSubmitting}
+              disabled={state.submitting}
             />
             {errors.email && (
               <p id="email-error" className="mt-1.5 text-xs text-red-500" role="alert">
                 {errors.email}
               </p>
             )}
+            <ValidationError
+              prefix=""
+              field="email"
+              errors={state.errors}
+              className="mt-1.5 text-xs text-red-500"
+            />
           </div>
 
           <div>
@@ -182,13 +187,19 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
               aria-invalid={!!errors.subject}
               aria-describedby={errors.subject ? "subject-error" : undefined}
               className={inputClassName(!!errors.subject)}
-              disabled={isSubmitting}
+              disabled={state.submitting}
             />
             {errors.subject && (
               <p id="subject-error" className="mt-1.5 text-xs text-red-500" role="alert">
                 {errors.subject}
               </p>
             )}
+            <ValidationError
+              prefix=""
+              field="subject"
+              errors={state.errors}
+              className="mt-1.5 text-xs text-red-500"
+            />
           </div>
 
           <div>
@@ -205,31 +216,27 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
               aria-invalid={!!errors.message}
               aria-describedby={errors.message ? "message-error" : undefined}
               className={cn(inputClassName(!!errors.message), "resize-none")}
-              disabled={isSubmitting}
+              disabled={state.submitting}
             />
             {errors.message && (
               <p id="message-error" className="mt-1.5 text-xs text-red-500" role="alert">
                 {errors.message}
               </p>
             )}
+            <ValidationError
+              prefix=""
+              field="message"
+              errors={state.errors}
+              className="mt-1.5 text-xs text-red-500"
+            />
           </div>
-
-          {submitted && (
-            <p
-              className="rounded-xl border border-accent/20 bg-accent/10 px-4 py-3 text-sm text-dark"
-              role="status"
-              aria-live="polite"
-            >
-              {dict.success}
-            </p>
-          )}
 
           <Button
             type="submit"
             className="w-full rounded-xl sm:w-auto"
-            disabled={isSubmitting}
+            disabled={state.submitting}
           >
-            {isSubmitting ? dict.submitting : dict.submit}
+            {state.submitting ? dict.submitting : dict.submit}
           </Button>
         </div>
       </form>
