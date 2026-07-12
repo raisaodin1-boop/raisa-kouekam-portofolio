@@ -236,30 +236,69 @@
     }
   },
   "contact": {
-    "title": "Contact",
-    "subtitle": "Ouverte aux opportunités au Canada, en France, en Allemagne, au Royaume-Uni et aux États-Unis. Parlons de votre projet ou poste.",
+    "label": "Contact",
+    "title": "Construisons quelque chose de grand ensemble",
+    "subtitle": "Je suis toujours intéressée par de nouvelles opportunités, collaborations et projets logiciels innovants.",
+    "intro": "Que vous recherchiez une Ingénieure Full Stack, souhaitiez discuter d'un projet ou simplement échanger, je serais ravie d'avoir de vos nouvelles.",
+    "cards": {
+      "email": {
+        "title": "Email"
+      },
+      "location": {
+        "title": "Localisation",
+        "lines": [
+          "Cameroun",
+          "Ouverte aux opportunités internationales"
+        ]
+      },
+      "availability": {
+        "title": "Disponibilité",
+        "lines": [
+          "Disponible en télétravail",
+          "Ouverte à la relocalisation"
+        ]
+      }
+    },
+    "socialLabel": "Réseaux",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "portfolio": "Portfolio",
+      "email": "Email"
+    },
+    "cta": {
+      "title": "Intéressé par une collaboration ?",
+      "subtitle": "Créons ensemble des solutions digitales à fort impact.",
+      "button": "Me contacter"
+    },
     "email": "Email",
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "whatsapp": "WhatsApp",
     "form": {
-      "name": "Nom",
-      "namePlaceholder": "Votre nom",
-      "email": "Email",
+      "name": "Nom complet",
+      "namePlaceholder": "Votre nom complet",
+      "email": "Adresse email",
       "emailPlaceholder": "vous@exemple.com",
+      "subject": "Sujet",
+      "subjectPlaceholder": "De quoi souhaitez-vous discuter ?",
       "message": "Message",
       "messagePlaceholder": "Parlez-moi de votre projet, poste ou idée de collaboration…",
-      "submit": "Envoyer",
+      "submit": "Envoyer le message",
       "success": "Merci ! Votre message a bien été reçu. Je vous répondrai rapidement.",
       "nameRequired": "Le nom est requis",
       "emailRequired": "L'email est requis",
       "emailInvalid": "Veuillez entrer une adresse email valide",
+      "subjectRequired": "Le sujet est requis",
       "messageRequired": "Le message est requis"
     }
   },
   "footer": {
-    "builtWith": "Construit avec Next.js, TypeScript & Tailwind CSS",
-    "rights": "Tous droits réservés.",
-    "navigation": "Navigation"
+    "role": "Ingénieure Full Stack",
+    "description": "Création d'applications web modernes et de produits digitaux.",
+    "quickLinks": "Liens rapides",
+    "social": "Réseaux",
+    "builtWith": "Conçu et développé avec Next.js, TypeScript et Tailwind CSS.",
+    "rights": "Tous droits réservés."
   }
 }
