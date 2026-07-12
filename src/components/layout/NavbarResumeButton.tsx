@@ -18,8 +18,8 @@ export function NavbarResumeButton({
   className,
   fullWidth = false,
 }: NavbarResumeButtonProps) {
-  const href = getResumeHref(locale, siteConfig.resumeUrl);
-  const { external, download } = getResumeLinkProps(siteConfig.resumeUrl);
+  const href = getResumeHref(locale, siteConfig.resumeUrls);
+  const { external, download } = getResumeLinkProps(locale, siteConfig.resumeUrls);
 
   return (
     <Link

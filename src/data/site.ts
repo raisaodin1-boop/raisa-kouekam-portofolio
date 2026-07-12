@@ -5,7 +5,10 @@ export const siteConfig = {
   linkedin: "https://www.linkedin.com/in/raisa-kouekam-37778a127",
   whatsapp: "https://wa.me/237696565654",
   whatsappDisplay: "+237 696 565 654",
-  resumeUrl: "/resume.pdf",
+  resumeUrls: {
+    en: "/resume.pdf",
+    fr: "/resume-fr.pdf",
+  },
   profilePhoto: "/profile/raisa-kouekam.jpg",
   url: "https://raisa-kouekam-portofolio.vercel.app",
 };
