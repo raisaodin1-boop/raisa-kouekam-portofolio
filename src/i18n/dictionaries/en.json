@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Raisa Kouekam — Full Stack Software Engineer",
-    "description": "Full Stack Software Engineer shipping production e-commerce and fintech products (Yorix, HODIX). Bilingual EN/FR. Open to international remote roles.",
+    "description": "Full Stack Software Engineer — 15+ projects delivered in production (Yorix, HODIX). Bilingual EN/FR. Open to international remote roles.",
     "skipToContent": "Skip to main content"
   },
   "a11y": {
@@ -31,7 +31,7 @@
   "home": {
     "greeting": "Full Stack Software Engineer",
     "name": "Raisa Kouekam",
-    "subtitle": "I design, build and ship production web applications — including e-commerce marketplaces and fintech platforms such as Yorix and HODIX — for real users and business impact.",
+    "subtitle": "I've designed, built and delivered 15+ production web applications — including e-commerce marketplaces and fintech platforms such as Yorix and HODIX — for real users and business impact.",
     "badge": "Available for International Opportunities",
     "highlights": [
       "Full Stack Development",
@@ -41,8 +41,8 @@
     ],
     "metrics": [
       {
-        "value": "3+",
-        "label": "Products in Production"
+        "value": "15+",
+        "label": "Projects Delivered"
       },
       {
         "value": "E-commerce & Fintech",
@@ -66,7 +66,7 @@
     "featuredSubtitle": "Live production products — marketplaces, fintech and business software — built end-to-end with modern web technologies.",
     "viewAllProjects": "View all projects",
     "aboutTitle": "About Me",
-    "aboutText": "Full Stack Engineer and founder at Yorix Digital Group. I deliver production systems across marketplaces, fintech and business software — from system design and UI to deployment and maintenance.",
+    "aboutText": "Full Stack Engineer and founder at Yorix Digital Group. With 15+ projects delivered to production, I build marketplaces, fintech and business software — from system design and UI to deployment and maintenance.",
     "learnMore": "Learn more",
     "skillsTitle": "Technical Expertise",
     "skillsSubtitle": "A balanced skill set across frontend, backend, cloud and tooling.",
@@ -85,7 +85,7 @@
     "paragraphs": [
       "I'm a Full Stack Software Engineer passionate about building modern web applications and digital products that create meaningful value for users and businesses.",
       "I design complete solutions — from intuitive user interfaces to robust backend architecture and thoughtful database management — ensuring every layer works together seamlessly.",
-      "My experience includes shipping production platforms such as Yorix Marketplace and HODIX Fintech, plus internal business software — turning complex requirements into reliable, user-facing products.",
+      "My experience includes 15+ projects delivered to production — platforms such as Yorix Marketplace and HODIX Fintech, plus internal business software — turning complex requirements into reliable, user-facing products.",
       "I believe in continuous learning, writing clean code, collaborating effectively with teams and building software designed to deliver long-term value."
     ],
     "highlights": [
@@ -228,8 +228,8 @@
     "achievementsTitle": "Key Achievements",
     "achievements": [
       {
-        "value": "3+",
-        "label": "Products in Production"
+        "value": "15+",
+        "label": "Projects Delivered"
       },
       {
         "value": "E-commerce & Fintech",
