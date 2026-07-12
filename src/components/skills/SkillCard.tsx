@@ -3,6 +3,7 @@
 import { SkillBadge } from "@/components/skills/SkillBadge";
 import type { LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
+import { useId } from "react";
 
 type SkillCardProps = {
   title: string;
@@ -19,6 +20,7 @@ function SkillCardContent({
   icon: Icon,
   description,
 }: Omit<SkillCardProps, "index" | "animate">) {
+  const headingId = useId();
   const isBadgeLayout = Boolean(description);
 
   return (
@@ -27,7 +29,12 @@ function SkillCardContent({
         <Icon className="h-5 w-5 text-primary" aria-hidden />
       </div>
 
-      <h3 className="text-lg font-semibold text-dark sm:text-xl">{title}</h3>
+      <h3
+        id={headingId}
+        className="text-lg font-semibold text-dark sm:text-xl"
+      >
+        {title}
+      </h3>
 
       {description && (
         <p className="mt-2.5 text-sm leading-relaxed text-muted sm:text-[0.9375rem] sm:leading-7">
@@ -39,7 +46,7 @@ function SkillCardContent({
         <ul
           className="mt-5 flex flex-wrap gap-2 sm:mt-6 sm:gap-2.5"
           role="list"
-          aria-label={`${title} technologies`}
+          aria-labelledby={headingId}
         >
           {skills.map((skill) => (
             <li key={skill} role="listitem">

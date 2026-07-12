@@ -5,9 +5,10 @@ import type { ExperienceDictionary } from "@/components/experience/types";
 
 type ExperienceContentProps = {
   dict: ExperienceDictionary;
+  timelineAriaLabel: string;
 };
 
-export function ExperienceContent({ dict }: ExperienceContentProps) {
+export function ExperienceContent({ dict, timelineAriaLabel }: ExperienceContentProps) {
   return (
     <section className="bg-white" aria-labelledby="experience-page-heading">
       <div className="mx-auto max-w-[1200px] px-6 py-24 sm:py-28 lg:py-32">
@@ -18,7 +19,10 @@ export function ExperienceContent({ dict }: ExperienceContentProps) {
           headingId="experience-page-heading"
         />
 
-        <ExperienceTimeline items={dict.items} />
+        <ExperienceTimeline
+          items={dict.items}
+          ariaLabel={timelineAriaLabel}
+        />
 
         <ExperienceAchievements
           title={dict.achievementsTitle}

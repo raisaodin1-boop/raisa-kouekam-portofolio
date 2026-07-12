@@ -15,9 +15,11 @@ type ProjectCardProps = {
   gradient: string;
   coverImage?: string;
   icon?: LucideIcon;
+  imagePriority?: boolean;
   labels: {
     liveDemo: string;
     github: string;
+    coverAltSuffix: string;
     features: string;
     techStack: string;
   };
@@ -33,12 +35,17 @@ export function ProjectCard({
   gradient,
   coverImage,
   icon,
+  imagePriority = false,
   labels,
 }: ProjectCardProps) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white card-shadow transition-all duration-300 hover:-translate-y-1 hover:card-shadow-hover">
       {coverImage ? (
-        <ProjectCoverImage src={coverImage} alt={`${title} screenshot`} />
+        <ProjectCoverImage
+          src={coverImage}
+          alt={`${title} — ${labels.coverAltSuffix}`}
+          priority={imagePriority}
+        />
       ) : (
         <ProjectImagePlaceholder
           title={title}

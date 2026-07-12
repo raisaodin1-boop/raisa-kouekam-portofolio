@@ -11,6 +11,7 @@
     "switchToFrench": "Passer en français",
     "contactForm": "Formulaire de contact",
     "contactInformation": "Informations de contact",
+    "keyHighlights": "Points clés",
     "professionalHighlights": "Points forts professionnels",
     "experienceTimeline": "Chronologie de l'expérience professionnelle",
     "skillCategories": "Catégories de compétences",
@@ -58,6 +59,7 @@
     ],
     "coreExpertise": "Expertise clé",
     "scrollIndicator": "Faire défiler",
+    "profilePhotoLabel": "Portrait professionnel de Raisa Kouekam — placeholder",
     "downloadResume": "Télécharger le CV",
     "viewProjects": "Voir les projets",
     "featuredTitle": "Projets sélectionnés",
@@ -138,7 +140,7 @@
       "database": "Base de données",
       "cloud": "Cloud",
       "tools": "Outils",
-      "languages": "Langages"
+      "languages": "Langues"
     },
     "items": {
       "frontend": {
@@ -172,6 +174,7 @@
     "subtitle": "Produits et plateformes que j'ai conçus et développés — de l'architecture au déploiement.",
     "liveDemo": "Démo live",
     "github": "GitHub",
+    "coverAltSuffix": "capture d'écran du projet",
     "features": "Fonctionnalités clés",
     "techStack": "Technologies",
     "items": {

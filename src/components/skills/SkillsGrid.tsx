@@ -12,6 +12,7 @@ import { motion, type Variants } from "framer-motion";
 
 type SkillsGridProps = {
   items: Record<SkillCategoryKey, SkillCategoryContent>;
+  ariaLabel: string;
 };
 
 const containerVariants: Variants = {
@@ -30,7 +31,7 @@ const cardVariants: Variants = {
   },
 };
 
-export function SkillsGrid({ items }: SkillsGridProps) {
+export function SkillsGrid({ items, ariaLabel }: SkillsGridProps) {
   return (
     <motion.div
       className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:gap-6"
@@ -39,7 +40,7 @@ export function SkillsGrid({ items }: SkillsGridProps) {
       viewport={{ once: true, margin: "-40px" }}
       variants={containerVariants}
       role="list"
-      aria-label="Skill categories"
+      aria-label={ariaLabel}
     >
       {skillCategoryKeys.map((key) => {
         const category = items[key];

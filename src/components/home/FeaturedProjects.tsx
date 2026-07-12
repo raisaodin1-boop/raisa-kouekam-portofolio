@@ -55,9 +55,11 @@ export function FeaturedProjects({ locale, dict }: FeaturedProjectsProps) {
                 gradient={data.gradient}
                 coverImage={data.coverImage}
                 icon={projectIcons[key]}
+                imagePriority={index === 0}
                 labels={{
                   liveDemo: dict.projects.liveDemo,
                   github: dict.projects.github,
+                  coverAltSuffix: dict.projects.coverAltSuffix,
                   features: dict.projects.features,
                   techStack: dict.projects.techStack,
                 }}

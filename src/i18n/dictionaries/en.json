@@ -11,6 +11,7 @@
     "switchToFrench": "Switch to French",
     "contactForm": "Contact form",
     "contactInformation": "Contact information",
+    "keyHighlights": "Key highlights",
     "professionalHighlights": "Professional highlights",
     "experienceTimeline": "Professional experience timeline",
     "skillCategories": "Skill categories",
@@ -57,6 +58,8 @@
       }
     ],
     "coreExpertise": "Core expertise",
+    "scrollIndicator": "Scroll down",
+    "profilePhotoLabel": "Raisa Kouekam professional portrait placeholder",
     "downloadResume": "Download Resume",
     "viewProjects": "View Projects",
     "featuredTitle": "Selected Work",
@@ -171,6 +174,7 @@
     "subtitle": "Products and platforms I've designed and built — from architecture to deployment.",
     "liveDemo": "Live Demo",
     "github": "GitHub",
+    "coverAltSuffix": "project screenshot",
     "features": "Key Features",
     "techStack": "Technologies",
     "items": {

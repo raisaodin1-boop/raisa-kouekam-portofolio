@@ -106,7 +106,7 @@ export function Hero({ locale, dict }: HeroProps) {
             <div
               className="flex h-56 w-56 items-center justify-center rounded-full border border-border bg-light-gray text-5xl font-semibold tracking-tight text-[#2563EB] shadow-[0_8px_30px_rgba(15,23,42,0.06)] sm:h-64 sm:w-64 sm:text-6xl lg:h-72 lg:w-72"
               role="img"
-              aria-label={`${dict.home.name} profile photo placeholder`}
+              aria-label={dict.home.profilePhotoLabel}
             >
               RK
             </div>
