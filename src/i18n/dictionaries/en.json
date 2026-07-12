@@ -159,30 +159,79 @@
     }
   },
   "experience": {
-    "title": "Experience",
-    "subtitle": "Professional journey across full stack development and product delivery.",
+    "label": "Professional Experience",
+    "title": "My Journey as a Software Engineer",
+    "subtitle": "Building digital products, solving business challenges and continuously improving through real-world software development.",
+    "achievementsTitle": "Key Achievements",
+    "achievements": [
+      {
+        "value": "2+",
+        "label": "Digital Products Built"
+      },
+      {
+        "value": "Full Stack",
+        "label": "Development Experience"
+      },
+      {
+        "value": "Modern",
+        "label": "Web Technologies"
+      },
+      {
+        "value": "International",
+        "label": "Career Goal"
+      }
+    ],
     "present": "Present",
     "items": {
-      "role1": {
-        "title": "Full Stack Software Engineer",
-        "company": "Company Name — Placeholder",
-        "period": "2023 — Present",
-        "location": "Remote — International",
-        "description": "Lead development of web applications and e-commerce platforms for global clients. Own features end-to-end from technical design and implementation to deployment and monitoring."
+      "yorixDigital": {
+        "title": "Founder & Full Stack Software Engineer",
+        "company": "Yorix Digital Group",
+        "period": "2024 - Present",
+        "location": "",
+        "description": "Leading the design, architecture and development of digital products focused on solving real business challenges through technology.",
+        "highlightsLabel": "Responsibilities",
+        "highlights": [
+          "Designing scalable web applications",
+          "Building frontend and backend systems",
+          "Database architecture",
+          "API development",
+          "Performance optimization",
+          "Product strategy",
+          "Technical decision making"
+        ]
       },
-      "role2": {
-        "title": "Software Developer",
-        "company": "Company Name — Placeholder",
-        "period": "2021 — 2023",
-        "location": "Remote",
-        "description": "Built responsive frontend interfaces and RESTful backend APIs. Collaborated with designers and product managers to deliver milestones on schedule in agile sprints."
+      "yorixMarketplace": {
+        "title": "Lead Developer",
+        "company": "Yorix Marketplace",
+        "period": "2024 - Present",
+        "location": "",
+        "description": "Developing a modern e-commerce platform connecting local and international businesses.",
+        "highlightsLabel": "Achievements",
+        "highlights": [
+          "Marketplace architecture",
+          "Vendor dashboard",
+          "Customer dashboard",
+          "Product management",
+          "Order management",
+          "Responsive design",
+          "SEO optimization"
+        ]
       },
-      "role3": {
-        "title": "Junior Web Developer",
-        "company": "Company Name — Placeholder",
-        "period": "2019 — 2021",
-        "location": "Hybrid",
-        "description": "Contributed to client web projects, implemented UI components and integrated third-party services. Developed strong foundations in code quality, testing and version control."
+      "hodix": {
+        "title": "Full Stack Developer",
+        "company": "HODIX Fintech Platform",
+        "period": "2025 - Present",
+        "location": "",
+        "description": "Designing and developing a digital finance platform focused on community savings and financial inclusion.",
+        "highlightsLabel": "Achievements",
+        "highlights": [
+          "Digital tontines",
+          "Wallet management",
+          "Payments",
+          "User authentication",
+          "Group management",
+          "Notifications"
+        ]
       }
     }
   },

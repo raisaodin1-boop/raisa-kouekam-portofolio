@@ -118,7 +118,8 @@ export const projectsData: Record<
   },
 };
 
-export const experienceKeys = ["role1", "role2", "role3"] as const;
+export { experienceKeys } from "./experience";
+export type { ExperienceKey } from "./experience";
 
 export const navItems = [
   { key: "home", href: "" },
