@@ -28,6 +28,8 @@ const inputClassName = (hasError: boolean) =>
 
 export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -39,7 +41,7 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -59,16 +61,37 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       setSubmitted(false);
+      setSubmitError(false);
       focusFirstError(newErrors);
       return;
     }
 
     setErrors({});
-    setSubmitted(true);
-    form.reset();
+    setSubmitted(false);
+    setSubmitError(false);
+    setIsSubmitting(true);
 
-    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-    window.location.href = `mailto:${siteConfig.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    try {
+      const response = await fetch(siteConfig.formspreeUrl, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, subject, message }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Formspree submission failed");
+      }
+
+      setSubmitted(true);
+      form.reset();
+    } catch {
+      setSubmitError(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const hasErrors = Object.keys(errors).length > 0;
@@ -89,6 +112,12 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
             </p>
           )}
 
+          {submitError && (
+            <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">
+              {dict.submitError}
+            </p>
+          )}
+
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-dark">
               {dict.name}
@@ -104,6 +133,7 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
               aria-invalid={!!errors.name}
               aria-describedby={errors.name ? "name-error" : undefined}
               className={inputClassName(!!errors.name)}
+              disabled={isSubmitting}
             />
             {errors.name && (
               <p id="name-error" className="mt-1.5 text-xs text-red-500" role="alert">
@@ -128,6 +158,7 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
               aria-invalid={!!errors.email}
               aria-describedby={errors.email ? "email-error" : undefined}
               className={inputClassName(!!errors.email)}
+              disabled={isSubmitting}
             />
             {errors.email && (
               <p id="email-error" className="mt-1.5 text-xs text-red-500" role="alert">
@@ -151,6 +182,7 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
               aria-invalid={!!errors.subject}
               aria-describedby={errors.subject ? "subject-error" : undefined}
               className={inputClassName(!!errors.subject)}
+              disabled={isSubmitting}
             />
             {errors.subject && (
               <p id="subject-error" className="mt-1.5 text-xs text-red-500" role="alert">
@@ -173,6 +205,7 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
               aria-invalid={!!errors.message}
               aria-describedby={errors.message ? "message-error" : undefined}
               className={cn(inputClassName(!!errors.message), "resize-none")}
+              disabled={isSubmitting}
             />
             {errors.message && (
               <p id="message-error" className="mt-1.5 text-xs text-red-500" role="alert">
@@ -191,8 +224,12 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
             </p>
           )}
 
-          <Button type="submit" className="w-full rounded-xl sm:w-auto">
-            {dict.submit}
+          <Button
+            type="submit"
+            className="w-full rounded-xl sm:w-auto"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? dict.submitting : dict.submit}
           </Button>
         </div>
       </form>

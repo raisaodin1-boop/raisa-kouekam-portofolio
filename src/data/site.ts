@@ -11,6 +11,7 @@ export const siteConfig = {
   },
   profilePhoto: "/profile/raisa-kouekam.jpg",
   url: "https://raisa-kouekam-portofolio.vercel.app",
+  formspreeUrl: "https://formspree.io/f/xlgqrqzw",
 };
 
 export function isConfiguredUrl(url: string): boolean {
