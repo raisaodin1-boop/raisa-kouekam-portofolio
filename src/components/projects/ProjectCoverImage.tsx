@@ -17,7 +17,7 @@ export function ProjectCoverImage({
   return (
     <div
       className={cn(
-        "relative h-52 w-full overflow-hidden bg-light-gray",
+        "relative aspect-[3/2] w-full overflow-hidden bg-light-gray",
         className
       )}
     >

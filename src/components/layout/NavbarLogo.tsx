@@ -6,15 +6,13 @@ type NavbarLogoProps = {
   locale: Locale;
   name: string;
   title: string;
-  ariaLabel: string;
 };
 
-export function NavbarLogo({ locale, name, title, ariaLabel }: NavbarLogoProps) {
+export function NavbarLogo({ locale, name, title }: NavbarLogoProps) {
   return (
     <Link
       href={getLocalizedPath("", locale)}
-      className="group rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2"
-      aria-label={ariaLabel}
+      className="group inline-flex min-h-11 min-w-11 flex-col justify-center rounded-lg py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2"
     >
       <span className="block text-[15px] font-semibold leading-tight tracking-tight text-[#0F172A] transition-colors duration-200 group-hover:text-[#2563EB]">
         {name}

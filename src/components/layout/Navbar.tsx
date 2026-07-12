@@ -146,7 +146,6 @@ export function Navbar({ locale, dict }: NavbarProps) {
             locale={locale}
             name={siteConfig.name}
             title={dict.home.greeting}
-            ariaLabel={`${siteConfig.name} — ${dict.nav.home}`}
           />
         </div>
 

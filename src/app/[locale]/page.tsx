@@ -7,10 +7,18 @@ import { HomeMetrics } from "@/components/home/HomeMetrics";
 import { SkillsPreview } from "@/components/home/SkillsPreview";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
+import { createRootMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = await getDictionary(locale as Locale);
+  return createRootMetadata(locale as Locale, dict);
+}
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;

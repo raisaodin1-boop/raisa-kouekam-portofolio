@@ -28,7 +28,7 @@ export function NavbarLink({
       href={getLocalizedPath(href, locale)}
       onClick={onNavigate}
       className={cn(
-        "group relative px-1 py-2 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+        "group relative inline-flex min-h-11 items-center px-3 py-2.5 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
         active ? "text-primary" : "text-muted hover:text-dark",
         className
       )}
