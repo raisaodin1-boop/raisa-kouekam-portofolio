@@ -186,30 +186,79 @@
     }
   },
   "experience": {
-    "title": "Expérience",
-    "subtitle": "Parcours professionnel en développement full stack et livraison produit.",
+    "label": "Expérience professionnelle",
+    "title": "Mon parcours en tant qu'ingénieure logiciel",
+    "subtitle": "Création de produits digitaux, résolution de défis business et amélioration continue à travers le développement logiciel en conditions réelles.",
+    "achievementsTitle": "Réalisations clés",
+    "achievements": [
+      {
+        "value": "2+",
+        "label": "Produits digitaux créés"
+      },
+      {
+        "value": "Full Stack",
+        "label": "Expérience en développement"
+      },
+      {
+        "value": "Modernes",
+        "label": "Technologies web"
+      },
+      {
+        "value": "International",
+        "label": "Objectif de carrière"
+      }
+    ],
     "present": "Aujourd'hui",
     "items": {
-      "role1": {
-        "title": "Ingénieure Full Stack",
-        "company": "Nom de l'entreprise — Placeholder",
-        "period": "2023 — Aujourd'hui",
-        "location": "Remote — International",
-        "description": "Pilotage du développement d'applications web et de plateformes e-commerce pour des clients internationaux. Responsable des fonctionnalités de la conception technique au déploiement."
+      "yorixDigital": {
+        "title": "Fondatrice & Ingénieure Full Stack",
+        "company": "Yorix Digital Group",
+        "period": "2024 - Aujourd'hui",
+        "location": "",
+        "description": "Direction de la conception, de l'architecture et du développement de produits digitaux axés sur la résolution de défis business concrets par la technologie.",
+        "highlightsLabel": "Responsabilités",
+        "highlights": [
+          "Conception d'applications web évolutives",
+          "Développement frontend et backend",
+          "Architecture de bases de données",
+          "Développement d'APIs",
+          "Optimisation des performances",
+          "Stratégie produit",
+          "Prise de décisions techniques"
+        ]
       },
-      "role2": {
-        "title": "Développeuse Logiciel",
-        "company": "Nom de l'entreprise — Placeholder",
-        "period": "2021 — 2023",
-        "location": "Remote",
-        "description": "Développement d'interfaces frontend responsive et d'APIs REST backend. Collaboration avec designers et product managers en sprints agiles."
+      "yorixMarketplace": {
+        "title": "Lead Developer",
+        "company": "Yorix Marketplace",
+        "period": "2024 - Aujourd'hui",
+        "location": "",
+        "description": "Développement d'une plateforme e-commerce moderne connectant entreprises locales et internationales.",
+        "highlightsLabel": "Réalisations",
+        "highlights": [
+          "Architecture marketplace",
+          "Tableau de bord vendeur",
+          "Tableau de bord client",
+          "Gestion des produits",
+          "Gestion des commandes",
+          "Design responsive",
+          "Optimisation SEO"
+        ]
       },
-      "role3": {
-        "title": "Développeuse Web Junior",
-        "company": "Nom de l'entreprise — Placeholder",
-        "period": "2019 — 2021",
-        "location": "Hybride",
-        "description": "Contribution à des projets web clients, implémentation de composants UI et intégration de services tiers. Bases solides en qualité de code, tests et versioning."
+      "hodix": {
+        "title": "Développeuse Full Stack",
+        "company": "Plateforme Fintech HODIX",
+        "period": "2025 - Aujourd'hui",
+        "location": "",
+        "description": "Conception et développement d'une plateforme de finance digitale axée sur l'épargne communautaire et l'inclusion financière.",
+        "highlightsLabel": "Réalisations",
+        "highlights": [
+          "Tontines digitales",
+          "Gestion de wallet",
+          "Paiements",
+          "Authentification utilisateur",
+          "Gestion de groupes",
+          "Notifications"
+        ]
       }
     }
   },

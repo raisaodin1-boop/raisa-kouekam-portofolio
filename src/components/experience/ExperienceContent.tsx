@@ -1,40 +1,31 @@
 "use client";
 
-import { TimelineItem } from "@/components/experience/TimelineItem";
-import { AnimateIn } from "@/components/ui/AnimateIn";
-import { PageContainer } from "@/components/ui/PageContainer";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { experienceKeys } from "@/data/site";
-import type { Dictionary } from "@/i18n/get-dictionary";
+import { ExperienceAchievements } from "@/components/experience/ExperienceAchievements";
+import { ExperienceSectionHeader } from "@/components/experience/ExperienceSectionHeader";
+import { ExperienceTimeline } from "@/components/experience/ExperienceTimeline";
+import type { ExperienceDictionary } from "@/components/experience/types";
 
 type ExperienceContentProps = {
-  dict: Dictionary["experience"];
+  dict: ExperienceDictionary;
 };
 
 export function ExperienceContent({ dict }: ExperienceContentProps) {
   return (
-    <PageContainer>
-      <AnimateIn>
-        <SectionHeading title={dict.title} subtitle={dict.subtitle} />
-      </AnimateIn>
+    <section className="bg-white" aria-labelledby="experience-page-heading">
+      <div className="mx-auto max-w-[1200px] px-6 py-24 sm:py-28 lg:py-32">
+        <ExperienceSectionHeader
+          label={dict.label}
+          title={dict.title}
+          subtitle={dict.subtitle}
+        />
 
-      <div className="mx-auto max-w-3xl">
-        {experienceKeys.map((key, index) => {
-          const item = dict.items[key];
-          return (
-            <TimelineItem
-              key={key}
-              title={item.title}
-              company={item.company}
-              period={item.period}
-              location={item.location}
-              description={item.description}
-              index={index}
-              isLast={index === experienceKeys.length - 1}
-            />
-          );
-        })}
+        <ExperienceTimeline items={dict.items} />
+
+        <ExperienceAchievements
+          title={dict.achievementsTitle}
+          achievements={dict.achievements}
+        />
       </div>
-    </PageContainer>
+    </section>
   );
 }

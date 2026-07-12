@@ -49,8 +49,14 @@ export function TimelineItem({
             {period}
           </span>
         </div>
-        <p className="mt-2 text-xs text-muted">{location}</p>
-        <p className="mt-4 text-sm leading-relaxed text-muted">{description}</p>
+        {location ? (
+          <p className="mt-2 text-xs text-muted">{location}</p>
+        ) : null}
+        <p
+          className={`text-sm leading-relaxed text-muted ${location ? "mt-4" : "mt-3"}`}
+        >
+          {description}
+        </p>
       </div>
     </motion.div>
   );
