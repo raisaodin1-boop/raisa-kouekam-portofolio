@@ -70,8 +70,9 @@
     }
   },
   "skills": {
-    "title": "Skills",
-    "subtitle": "Technologies and tools I use to design, build and deploy modern, production-ready applications.",
+    "label": "Technical Skills",
+    "title": "Technologies I Work With",
+    "subtitle": "A selection of the technologies, tools and frameworks I use to design, develop and deploy modern software applications.",
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
@@ -79,6 +80,32 @@
       "cloud": "Cloud",
       "tools": "Tools",
       "languages": "Languages"
+    },
+    "items": {
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "Building responsive and modern user interfaces."
+      },
+      "backend": {
+        "title": "Backend Development",
+        "description": "Building secure, scalable and maintainable server-side applications."
+      },
+      "database": {
+        "title": "Database",
+        "description": "Designing and managing structured application data."
+      },
+      "devops": {
+        "title": "Tools & DevOps",
+        "description": "Tools used for development, collaboration and deployment."
+      },
+      "engineering": {
+        "title": "Software Engineering",
+        "description": "Best practices used during software development."
+      },
+      "learning": {
+        "title": "Currently Learning",
+        "description": "Technologies I continue exploring to improve my engineering skills."
+      }
     }
   },
   "projects": {
