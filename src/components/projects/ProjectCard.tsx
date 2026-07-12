@@ -1,4 +1,4 @@
-import { HodixProjectPreview } from "@/components/projects/HodixProjectPreview";
+import { ProjectCoverImage } from "@/components/projects/ProjectCoverImage";
 import { ProjectImagePlaceholder } from "@/components/projects/ProjectImagePlaceholder";
 import { Badge } from "@/components/ui/Badge";
 import { LinkButton } from "@/components/ui/LinkButton";
@@ -13,8 +13,8 @@ type ProjectCardProps = {
   liveUrl: string;
   githubUrl: string;
   gradient: string;
+  coverImage?: string;
   icon?: LucideIcon;
-  preview?: "hodix";
   labels: {
     liveDemo: string;
     github: string;
@@ -31,14 +31,14 @@ export function ProjectCard({
   liveUrl,
   githubUrl,
   gradient,
+  coverImage,
   icon,
-  preview,
   labels,
 }: ProjectCardProps) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white card-shadow transition-all duration-300 hover:-translate-y-1 hover:card-shadow-hover">
-      {preview === "hodix" ? (
-        <HodixProjectPreview />
+      {coverImage ? (
+        <ProjectCoverImage src={coverImage} alt={`${title} screenshot`} />
       ) : (
         <ProjectImagePlaceholder
           title={title}

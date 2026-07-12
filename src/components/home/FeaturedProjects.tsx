@@ -24,6 +24,7 @@ type FeaturedProjectsProps = {
 const projectIcons: Record<ProjectKey, LucideIcon> = {
   yorix: ShoppingBag,
   hodix: Wallet,
+  digitalGroup: ShoppingBag,
   portfolio: ArrowRight,
 };
 
@@ -52,8 +53,8 @@ export function FeaturedProjects({ locale, dict }: FeaturedProjectsProps) {
                 liveUrl={data.liveUrl}
                 githubUrl={data.githubUrl}
                 gradient={data.gradient}
+                coverImage={data.coverImage}
                 icon={projectIcons[key]}
-                preview={data.preview}
                 labels={{
                   liveDemo: dict.projects.liveDemo,
                   github: dict.projects.github,

@@ -6,7 +6,7 @@ import { PageContainer } from "@/components/ui/PageContainer";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { projectKeys, projectsData, type ProjectKey } from "@/data/site";
 import type { Dictionary } from "@/i18n/get-dictionary";
-import { Layout, ShoppingBag, Wallet, type LucideIcon } from "lucide-react";
+import { Building2, Layout, ShoppingBag, Wallet, type LucideIcon } from "lucide-react";
 
 type ProjectsContentProps = {
   dict: Dictionary;
@@ -15,6 +15,7 @@ type ProjectsContentProps = {
 const projectIcons: Record<ProjectKey, LucideIcon> = {
   yorix: ShoppingBag,
   hodix: Wallet,
+  digitalGroup: Building2,
   portfolio: Layout,
 };
 
@@ -43,8 +44,8 @@ export function ProjectsContent({ dict }: ProjectsContentProps) {
                 liveUrl={data.liveUrl}
                 githubUrl={data.githubUrl}
                 gradient={data.gradient}
+                coverImage={data.coverImage}
                 icon={projectIcons[key]}
-                preview={data.preview}
                 labels={{
                   liveDemo: dict.projects.liveDemo,
                   github: dict.projects.github,

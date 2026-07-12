@@ -43,9 +43,14 @@ export const skillCategories = {
   ],
 } as const;
 
-export type ProjectKey = "yorix" | "hodix" | "portfolio";
+export type ProjectKey = "yorix" | "hodix" | "digitalGroup" | "portfolio";
 
-export const projectKeys: ProjectKey[] = ["yorix", "hodix", "portfolio"];
+export const projectKeys: ProjectKey[] = [
+  "yorix",
+  "hodix",
+  "digitalGroup",
+  "portfolio",
+];
 
 export const projectsData: Record<
   ProjectKey,
@@ -54,7 +59,7 @@ export const projectsData: Record<
     liveUrl: string;
     githubUrl: string;
     gradient: string;
-    preview?: "hodix";
+    coverImage?: string;
   }
 > = {
   yorix: {
@@ -69,6 +74,7 @@ export const projectsData: Record<
     liveUrl: "#",
     githubUrl: "#",
     gradient: "from-blue-500/25 via-primary/10 to-teal-500/20",
+    coverImage: "/projects/yorix/cover.png",
   },
   hodix: {
     techStack: [
@@ -82,7 +88,21 @@ export const projectsData: Record<
     liveUrl: "https://www.hodix.app",
     githubUrl: "",
     gradient: "from-[#0f2e24] to-[#1a4d3e]",
-    preview: "hodix",
+    coverImage: "/projects/hodix/cover.png",
+  },
+  digitalGroup: {
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Vercel",
+    ],
+    liveUrl: "#",
+    githubUrl: "#",
+    gradient: "from-slate-500/20 via-primary/10 to-blue-500/15",
+    coverImage: "/projects/digital-group/cover.png",
   },
   portfolio: {
     techStack: [

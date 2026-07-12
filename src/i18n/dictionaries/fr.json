@@ -119,6 +119,16 @@
           "Animations fluides et layout entièrement responsive",
           "Architecture prête pour le déploiement sur Vercel"
         ]
+      },
+      "digitalGroup": {
+        "title": "Yorix Digital Group",
+        "description": "Une plateforme de services digitaux proposant des solutions web modernes, une présence de marque et des outils business — conçue pour aider les entreprises à lancer et scaler leur activité en ligne.",
+        "features": [
+          "Pages vitrine professionnelles et présence web corporate",
+          "Interface responsive conçue pour les clients business",
+          "Architecture modulaire pour des produits digitaux évolutifs",
+          "Stack prête pour le déploiement sur infrastructure cloud moderne"
+        ]
       }
     }
   },
