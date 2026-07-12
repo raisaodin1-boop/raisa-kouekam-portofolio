@@ -37,7 +37,13 @@ export function ProfilePhoto({
   const styles = variantSizes[variant];
 
   return (
-    <div className={cn(styles.wrapper, variant === "circle" && className)}>
+    <div
+      className={cn(
+        styles.wrapper,
+        styles.defaultClassName,
+        variant === "portrait" && className
+      )}
+    >
       <Image
         src={siteConfig.profilePhoto}
         alt={alt}

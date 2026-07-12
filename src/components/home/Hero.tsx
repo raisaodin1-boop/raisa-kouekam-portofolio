@@ -14,8 +14,8 @@ type HeroProps = {
   dict: Dictionary;
 };
 
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 12 },
+const fadeUp = (delay = 0, visible = false) => ({
+  initial: visible ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.5, delay, ease: "easeOut" as const },
 });
@@ -41,7 +41,7 @@ export function Hero({ locale, dict }: HeroProps) {
             </motion.p>
 
             <motion.h1
-              {...fadeUp(0.08)}
+              {...fadeUp(0.08, true)}
               id="hero-heading"
               className="mt-8 text-4xl font-bold tracking-tight text-[#0F172A] sm:text-5xl lg:text-6xl lg:leading-[1.08]"
             >
@@ -49,14 +49,14 @@ export function Hero({ locale, dict }: HeroProps) {
             </motion.h1>
 
             <motion.p
-              {...fadeUp(0.16)}
+              {...fadeUp(0.16, true)}
               className="mt-4 text-lg font-medium text-[#2563EB] sm:text-xl"
             >
               {dict.home.greeting}
             </motion.p>
 
             <motion.p
-              {...fadeUp(0.24)}
+              {...fadeUp(0.24, true)}
               className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-muted sm:text-lg sm:leading-8 lg:mx-0"
             >
               {dict.home.subtitle}
@@ -107,7 +107,6 @@ export function Hero({ locale, dict }: HeroProps) {
             <ProfilePhoto
               alt={dict.home.profilePhotoLabel}
               variant="circle"
-              priority
             />
           </motion.div>
         </div>
