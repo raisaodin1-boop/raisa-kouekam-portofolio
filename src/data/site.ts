@@ -5,9 +5,12 @@ export const siteConfig = {
   linkedin: "https://www.linkedin.com/in/raisa-kouekam-37778a127",
   whatsapp: "https://wa.me/237696565654",
   whatsappDisplay: "+237 696 565 654",
-  resumeUrl: "/resume.pdf",
+  resumeUrls: {
+    en: "/resume.pdf",
+    fr: "/resume-fr.pdf",
+  },
   profilePhoto: "/profile/raisa-kouekam.jpg",
-  url: "https://raisa-kouekam-portfolio.vercel.app",
+  url: "https://raisa-kouekam-portofolio.vercel.app",
 };
 
 export function isConfiguredUrl(url: string): boolean {
@@ -141,9 +144,9 @@ export type { ExperienceKey } from "./experience";
 export const navbarItems = [
   { key: "home", href: "" },
   { key: "about", href: "/about" },
-  { key: "skills", href: "/skills" },
   { key: "projects", href: "/projects" },
   { key: "experience", href: "/experience" },
+  { key: "skills", href: "/skills" },
   { key: "contact", href: "/contact" },
 ] as const;
 

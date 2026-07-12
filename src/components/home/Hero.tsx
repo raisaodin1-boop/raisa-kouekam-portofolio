@@ -17,7 +17,7 @@ const fadeUp = (delay = 0, visible = false) => ({
   transition: { duration: 0.5, delay, ease: "easeOut" as const },
 });
 
-export function Hero({ locale: _locale, dict }: HeroProps) {
+export function Hero({ dict }: HeroProps) {
 
   return (
     <section
