@@ -1,12 +1,17 @@
 export const siteConfig = {
   name: "Raisa Kouekam",
-  email: "your.email@example.com",
+  email: "raisakouekam@gmail.com",
   github: "https://github.com/raisaodin1-boop",
-  linkedin: "https://linkedin.com/in/your-profile",
-  whatsapp: "https://wa.me/0000000000",
-  resumeUrl: "/resume.pdf",
+  linkedin: "",
+  whatsapp: "https://wa.me/237696565654",
+  whatsappDisplay: "+237 696 565 654",
+  resumeUrl: "",
   url: "https://raisa-kouekam-portfolio.vercel.app",
 };
+
+export function isConfiguredUrl(url: string): boolean {
+  return Boolean(url && url !== "#");
+}
 
 export const skillCategories = {
   frontend: [

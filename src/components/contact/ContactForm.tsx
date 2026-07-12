@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/Button";
-import { siteConfig } from "@/data/site";
+import { siteConfig, isConfiguredUrl } from "@/data/site";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -62,19 +62,23 @@ export function ContactForm({ dict }: ContactFormProps) {
       label: dict.github,
       value: "GitHub",
     },
-    {
-      key: "linkedin" as const,
-      href: siteConfig.linkedin,
-      icon: Share2,
-      label: dict.linkedin,
-      value: "LinkedIn",
-    },
+    ...(isConfiguredUrl(siteConfig.linkedin)
+      ? [
+          {
+            key: "linkedin" as const,
+            href: siteConfig.linkedin,
+            icon: Share2,
+            label: dict.linkedin,
+            value: "LinkedIn",
+          },
+        ]
+      : []),
     {
       key: "whatsapp" as const,
       href: siteConfig.whatsapp,
       icon: MessageCircle,
       label: dict.whatsapp,
-      value: "WhatsApp",
+      value: siteConfig.whatsappDisplay,
     },
   ];
 

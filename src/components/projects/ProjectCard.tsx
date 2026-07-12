@@ -1,6 +1,7 @@
 import { ProjectImagePlaceholder } from "@/components/projects/ProjectImagePlaceholder";
 import { Badge } from "@/components/ui/Badge";
 import { LinkButton } from "@/components/ui/LinkButton";
+import { isConfiguredUrl } from "@/data/site";
 import { ExternalLink, GitBranch, type LucideIcon } from "lucide-react";
 
 type ProjectCardProps = {
@@ -84,26 +85,30 @@ export function ProjectCard({
         </div>
 
         <div className="mt-7 flex flex-wrap gap-3 border-t border-border pt-6">
-          <LinkButton
-            href={liveUrl}
-            external
-            variant="primary"
-            className="text-sm"
-            aria-label={`${labels.liveDemo} — ${title}`}
-          >
-            <ExternalLink className="h-4 w-4" aria-hidden />
-            {labels.liveDemo}
-          </LinkButton>
-          <LinkButton
-            href={githubUrl}
-            external
-            variant="outline"
-            className="text-sm"
-            aria-label={`${labels.github} — ${title}`}
-          >
-            <GitBranch className="h-4 w-4" aria-hidden />
-            {labels.github}
-          </LinkButton>
+          {isConfiguredUrl(liveUrl) && (
+            <LinkButton
+              href={liveUrl}
+              external
+              variant="primary"
+              className="text-sm"
+              aria-label={`${labels.liveDemo} — ${title}`}
+            >
+              <ExternalLink className="h-4 w-4" aria-hidden />
+              {labels.liveDemo}
+            </LinkButton>
+          )}
+          {isConfiguredUrl(githubUrl) && (
+            <LinkButton
+              href={githubUrl}
+              external
+              variant="outline"
+              className="text-sm"
+              aria-label={`${labels.github} — ${title}`}
+            >
+              <GitBranch className="h-4 w-4" aria-hidden />
+              {labels.github}
+            </LinkButton>
+          )}
         </div>
       </div>
     </article>

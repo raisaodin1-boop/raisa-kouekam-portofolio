@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems, siteConfig } from "@/data/site";
+import { navItems, siteConfig, isConfiguredUrl } from "@/data/site";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/config";
 import { getLocalizedPath } from "@/lib/utils";
@@ -14,7 +14,9 @@ type FooterProps = {
 
 const socialLinks = [
   { href: siteConfig.github, icon: GitBranch, label: "GitHub" },
-  { href: siteConfig.linkedin, icon: Share2, label: "LinkedIn" },
+  ...(isConfiguredUrl(siteConfig.linkedin)
+    ? [{ href: siteConfig.linkedin, icon: Share2, label: "LinkedIn" }]
+    : []),
   { href: `mailto:${siteConfig.email}`, icon: Mail, label: "Email" },
   { href: siteConfig.whatsapp, icon: MessageCircle, label: "WhatsApp" },
 ];

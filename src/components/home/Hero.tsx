@@ -1,7 +1,7 @@
 "use client";
 
 import { LinkButton } from "@/components/ui/LinkButton";
-import { siteConfig } from "@/data/site";
+import { siteConfig, isConfiguredUrl } from "@/data/site";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/config";
 import { getLocalizedPath } from "@/lib/utils";
@@ -71,15 +71,17 @@ export function Hero({ locale, dict }: HeroProps) {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start"
             >
-              <LinkButton
-                href={siteConfig.resumeUrl}
-                external
-                variant="primary"
-                aria-label={dict.home.downloadResume}
-              >
-                <Download className="h-4 w-4" aria-hidden />
-                {dict.home.downloadResume}
-              </LinkButton>
+              {isConfiguredUrl(siteConfig.resumeUrl) && (
+                <LinkButton
+                  href={siteConfig.resumeUrl}
+                  external
+                  variant="primary"
+                  aria-label={dict.home.downloadResume}
+                >
+                  <Download className="h-4 w-4" aria-hidden />
+                  {dict.home.downloadResume}
+                </LinkButton>
+              )}
               <LinkButton
                 href={getLocalizedPath("/projects", locale)}
                 variant="outline"
