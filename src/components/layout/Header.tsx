@@ -50,7 +50,7 @@ export function Header({ locale, dict }: HeaderProps) {
                 "rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                 isActive(item.href)
                   ? "text-primary bg-primary/5"
-                  : "text-muted hover:text-dark"
+                  : "text-muted hover:bg-light-gray hover:text-dark"
               )}
             >
               {dict.nav[item.key as keyof typeof dict.nav]}

@@ -17,9 +17,9 @@ export function SkillCard({ title, skills, icon: Icon, index }: SkillCardProps) 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-30px" }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
-      className="rounded-2xl border border-border bg-white p-6 card-shadow transition-all duration-300 hover:card-shadow-hover"
+      className="group h-full rounded-2xl border border-border bg-white p-6 card-shadow transition-all duration-300 hover:-translate-y-1 hover:card-shadow-hover"
     >
-      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
+      <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary/15">
         <Icon className="h-5 w-5 text-primary" aria-hidden />
       </div>
       <h3 className="text-lg font-semibold text-dark">{title}</h3>
@@ -27,9 +27,9 @@ export function SkillCard({ title, skills, icon: Icon, index }: SkillCardProps) 
         {skills.map((skill) => (
           <li
             key={skill}
-            className="flex items-center gap-2 text-sm text-muted"
+            className="flex items-center gap-2.5 text-sm text-muted"
           >
-            <span className="h-1 w-1 rounded-full bg-accent" aria-hidden />
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
             {skill}
           </li>
         ))}

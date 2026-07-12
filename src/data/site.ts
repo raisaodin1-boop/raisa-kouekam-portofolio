@@ -9,37 +9,85 @@ export const siteConfig = {
 };
 
 export const skillCategories = {
-  frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"],
-  backend: ["Node.js", "Express", "REST APIs", "GraphQL", "Python"],
-  database: ["PostgreSQL", "MongoDB", "Redis", "Prisma", "SQL"],
-  cloud: ["AWS", "Vercel", "Docker", "CI/CD", "Linux"],
-  tools: ["Git", "Figma", "VS Code", "Jest", "Postman"],
-  languages: ["JavaScript", "TypeScript", "Python", "SQL", "French", "English"],
+  frontend: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "HTML/CSS",
+    "Responsive Design",
+  ],
+  backend: [
+    "Node.js",
+    "Express",
+    "REST APIs",
+    "GraphQL",
+    "Python",
+    "Authentication",
+  ],
+  database: ["PostgreSQL", "MongoDB", "Redis", "Prisma", "SQL", "Data Modeling"],
+  cloud: ["AWS", "Vercel", "Docker", "CI/CD", "Linux", "Cloud Deployment"],
+  tools: ["Git", "Figma", "VS Code", "Jest", "Postman", "Agile/Scrum"],
+  languages: [
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "SQL",
+    "French",
+    "English",
+  ],
 } as const;
 
 export type ProjectKey = "yorix" | "hodix" | "portfolio";
 
+export const projectKeys: ProjectKey[] = ["yorix", "hodix", "portfolio"];
+
 export const projectsData: Record<
   ProjectKey,
-  { techStack: string[]; liveUrl: string; githubUrl: string; gradient: string }
+  {
+    techStack: string[];
+    liveUrl: string;
+    githubUrl: string;
+    gradient: string;
+  }
 > = {
   yorix: {
-    techStack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS"],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Stripe",
+      "Tailwind CSS",
+    ],
     liveUrl: "#",
     githubUrl: "#",
-    gradient: "from-blue-500/20 to-teal-500/20",
+    gradient: "from-blue-500/25 via-primary/10 to-teal-500/20",
   },
   hodix: {
-    techStack: ["React", "Node.js", "MongoDB", "Stripe", "Docker"],
+    techStack: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "Plaid API",
+      "Docker",
+    ],
     liveUrl: "#",
     githubUrl: "#",
-    gradient: "from-indigo-500/20 to-purple-500/20",
+    gradient: "from-indigo-500/25 via-purple-500/10 to-blue-500/20",
   },
   portfolio: {
-    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    techStack: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "i18n",
+    ],
     liveUrl: "#",
     githubUrl: "https://github.com/raisaodin1-boop/raisa-kouekam-portofolio",
-    gradient: "from-teal-500/20 to-blue-500/20",
+    gradient: "from-teal-500/25 via-accent/10 to-primary/15",
   },
 };
 
@@ -53,3 +101,11 @@ export const navItems = [
   { key: "skills", href: "/skills" },
   { key: "contact", href: "/contact" },
 ] as const;
+
+export const featuredProjectKeys: ProjectKey[] = ["yorix", "hodix"];
+
+export const previewSkillKeys = [
+  "frontend",
+  "backend",
+  "cloud",
+] as const satisfies ReadonlyArray<keyof typeof skillCategories>;

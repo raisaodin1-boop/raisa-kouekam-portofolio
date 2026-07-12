@@ -1,6 +1,8 @@
 "use client";
 
 import { SkillCard } from "@/components/skills/SkillCard";
+import { AnimateIn } from "@/components/ui/AnimateIn";
+import { PageContainer } from "@/components/ui/PageContainer";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { skillCategories } from "@/data/site";
 import type { Dictionary } from "@/i18n/get-dictionary";
@@ -28,8 +30,10 @@ const categoryConfig = [
 
 export function SkillsContent({ dict }: SkillsContentProps) {
   return (
-    <div className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeading title={dict.title} subtitle={dict.subtitle} />
+    <PageContainer>
+      <AnimateIn>
+        <SectionHeading title={dict.title} subtitle={dict.subtitle} />
+      </AnimateIn>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {categoryConfig.map(({ key, icon }, index) => (
@@ -42,6 +46,6 @@ export function SkillsContent({ dict }: SkillsContentProps) {
           />
         ))}
       </div>
-    </div>
+    </PageContainer>
   );
 }

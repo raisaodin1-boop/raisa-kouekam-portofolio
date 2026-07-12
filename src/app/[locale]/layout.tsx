@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { SkipLink } from "@/components/layout/SkipLink";
 import { locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
-import { siteConfig } from "@/data/site";
+import { createRootMetadata } from "@/lib/metadata";
 
 type Props = {
   children: React.ReactNode;
@@ -18,47 +19,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
-  const isEn = locale === "en";
-
-  return {
-    title: dict.meta.title,
-    description: dict.meta.description,
-    keywords: [
-      "Full Stack Developer",
-      "Software Engineer",
-      "Next.js",
-      "TypeScript",
-      "React",
-      "Web Development",
-    ],
-    authors: [{ name: siteConfig.name }],
-    creator: siteConfig.name,
-    openGraph: {
-      type: "website",
-      locale: isEn ? "en_US" : "fr_FR",
-      alternateLocale: isEn ? "fr_FR" : "en_US",
-      url: `${siteConfig.url}/${locale}`,
-      title: dict.meta.title,
-      description: dict.meta.description,
-      siteName: siteConfig.name,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: dict.meta.title,
-      description: dict.meta.description,
-    },
-    alternates: {
-      canonical: `${siteConfig.url}/${locale}`,
-      languages: {
-        en: `${siteConfig.url}/en`,
-        fr: `${siteConfig.url}/fr`,
-      },
-    },
-    robots: {
-      index: true,
-      follow: true,
-    },
-  };
+  return createRootMetadata(locale as Locale, dict);
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
@@ -72,9 +33,10 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <>
+      <SkipLink label={dict.meta.skipToContent} />
       <Header locale={locale as Locale} dict={dict} />
       <main id="main-content">{children}</main>
-      <Footer dict={dict} />
+      <Footer locale={locale as Locale} dict={dict} />
     </>
   );
 }

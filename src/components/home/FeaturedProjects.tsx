@@ -1,43 +1,49 @@
 "use client";
 
 import { ProjectCard } from "@/components/projects/ProjectCard";
+import { AnimateIn } from "@/components/ui/AnimateIn";
 import { LinkButton } from "@/components/ui/LinkButton";
+import { PageContainer } from "@/components/ui/PageContainer";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { projectsData, type ProjectKey } from "@/data/site";
+import {
+  featuredProjectKeys,
+  projectsData,
+  type ProjectKey,
+} from "@/data/site";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import type { Locale } from "@/i18n/config";
 import { getLocalizedPath } from "@/lib/utils";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShoppingBag, Wallet } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 type FeaturedProjectsProps = {
   locale: Locale;
   dict: Dictionary;
 };
 
-const featuredKeys: ProjectKey[] = ["yorix", "hodix"];
+const projectIcons: Record<ProjectKey, LucideIcon> = {
+  yorix: ShoppingBag,
+  hodix: Wallet,
+  portfolio: ArrowRight,
+};
 
 export function FeaturedProjects({ locale, dict }: FeaturedProjectsProps) {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24">
-      <SectionHeading
-        title={dict.home.featuredTitle}
-        subtitle={dict.home.featuredSubtitle}
-      />
+    <PageContainer as="section" id="projects-preview">
+      <AnimateIn>
+        <SectionHeading
+          title={dict.home.featuredTitle}
+          subtitle={dict.home.featuredSubtitle}
+        />
+      </AnimateIn>
 
-      <div className="grid gap-8 md:grid-cols-2">
-        {featuredKeys.map((key, index) => {
+      <div className="grid gap-8 lg:grid-cols-2">
+        {featuredProjectKeys.map((key, index) => {
           const project = dict.projects.items[key];
           const data = projectsData[key];
 
           return (
-            <motion.div
-              key={key}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
+            <AnimateIn key={key} delay={index * 0.1}>
               <ProjectCard
                 title={project.title}
                 description={project.description}
@@ -46,6 +52,7 @@ export function FeaturedProjects({ locale, dict }: FeaturedProjectsProps) {
                 liveUrl={data.liveUrl}
                 githubUrl={data.githubUrl}
                 gradient={data.gradient}
+                icon={projectIcons[key]}
                 labels={{
                   liveDemo: dict.projects.liveDemo,
                   github: dict.projects.github,
@@ -53,12 +60,12 @@ export function FeaturedProjects({ locale, dict }: FeaturedProjectsProps) {
                   techStack: dict.projects.techStack,
                 }}
               />
-            </motion.div>
+            </AnimateIn>
           );
         })}
       </div>
 
-      <div className="mt-12 text-center">
+      <AnimateIn className="mt-12 text-center" delay={0.2}>
         <LinkButton
           href={getLocalizedPath("/projects", locale)}
           variant="outline"
@@ -66,7 +73,7 @@ export function FeaturedProjects({ locale, dict }: FeaturedProjectsProps) {
           {dict.home.viewAllProjects}
           <ArrowRight className="h-4 w-4" aria-hidden />
         </LinkButton>
-      </div>
-    </section>
+      </AnimateIn>
+    </PageContainer>
   );
 }
