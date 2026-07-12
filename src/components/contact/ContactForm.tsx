@@ -6,6 +6,7 @@ import type { ContactDictionary } from "@/components/contact/types";
 import { cn } from "@/lib/utils";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 import { useForm, ValidationError } from "@formspree/react";
+import { CheckCircle2 } from "lucide-react";
 import { useRef, useState } from "react";
 
 type ContactFormProps = {
@@ -17,9 +18,13 @@ type ContactFormProps = {
 type FormErrors = {
   name?: string;
   email?: string;
+  inquiryType?: string;
+  company?: string;
   subject?: string;
   message?: string;
 };
+
+const MIN_MESSAGE_LENGTH = 20;
 
 const inputClassName = (hasError: boolean) =>
   cn(
@@ -28,12 +33,19 @@ const inputClassName = (hasError: boolean) =>
   );
 
 export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactFormProps) {
-  const [state, formspreeSubmit] = useForm(siteConfig.formspreeFormId);
+  const [state, formspreeSubmit, reset] = useForm(siteConfig.formspreeFormId);
   const [errors, setErrors] = useState<FormErrors>({});
   const formRef = useRef<HTMLFormElement>(null);
 
   const focusFirstError = (newErrors: FormErrors) => {
-    const order = ["name", "email", "subject", "message"] as const;
+    const order = [
+      "name",
+      "email",
+      "inquiryType",
+      "company",
+      "subject",
+      "message",
+    ] as const;
     const firstKey = order.find((key) => newErrors[key]);
     if (firstKey) {
       formRef.current?.querySelector<HTMLElement>(`#${firstKey}`)?.focus();
@@ -46,6 +58,8 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
     const formData = new FormData(form);
     const name = (formData.get("name") as string).trim();
     const email = (formData.get("email") as string).trim();
+    const inquiryType = (formData.get("inquiryType") as string).trim();
+    const company = (formData.get("company") as string).trim();
     const subject = (formData.get("subject") as string).trim();
     const message = (formData.get("message") as string).trim();
 
@@ -54,8 +68,11 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
     if (!email) newErrors.email = dict.emailRequired;
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
       newErrors.email = dict.emailInvalid;
+    if (!inquiryType) newErrors.inquiryType = dict.inquiryTypeRequired;
     if (!subject) newErrors.subject = dict.subjectRequired;
     if (!message) newErrors.message = dict.messageRequired;
+    else if (message.length < MIN_MESSAGE_LENGTH)
+      newErrors.message = dict.messageTooShort;
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -74,11 +91,31 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
     return (
       <AnimateIn direction="right" delay={0.15}>
         <div
-          className="rounded-2xl border border-accent/20 bg-accent/10 p-6 text-sm text-dark sm:p-8"
+          className="rounded-2xl border border-accent/20 bg-accent/10 p-6 text-center sm:p-10"
           role="status"
           aria-live="polite"
         >
-          {dict.success}
+          <CheckCircle2
+            className="mx-auto h-12 w-12 text-accent"
+            aria-hidden
+          />
+          <h3 className="mt-4 text-xl font-semibold text-dark">
+            {dict.successTitle}
+          </h3>
+          <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted sm:text-base">
+            {dict.success}
+          </p>
+          <p className="mx-auto mt-2 max-w-md text-sm text-muted">
+            {dict.successHint}
+          </p>
+          <Button
+            type="button"
+            variant="outline"
+            className="mt-8 rounded-xl"
+            onClick={() => reset()}
+          >
+            {dict.sendAnother}
+          </Button>
         </div>
       </AnimateIn>
     );
@@ -89,19 +126,25 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="rounded-2xl border border-border bg-white p-6 card-shadow sm:p-8"
+        className="relative rounded-2xl border border-border bg-white p-6 card-shadow sm:p-8"
         noValidate
         aria-label={formAriaLabel}
       >
         <div className="space-y-5">
           {hasErrors && (
-            <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">
+            <p
+              className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+              role="alert"
+            >
               {errorSummaryLabel}
             </p>
           )}
 
           {hasFormspreeError && (
-            <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">
+            <p
+              className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+              role="alert"
+            >
               {dict.submitError}
             </p>
           )}
@@ -110,6 +153,21 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
             errors={state.errors}
             className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
           />
+
+          {/* Honeypot — bots only; Formspree silently ignores if filled */}
+          <div
+            aria-hidden="true"
+            className="absolute -left-[9999px] h-0 w-0 overflow-hidden"
+          >
+            <label htmlFor="_gotcha">{dict.honeypotLabel}</label>
+            <input
+              type="text"
+              id="_gotcha"
+              name="_gotcha"
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </div>
 
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-dark">
@@ -173,6 +231,63 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
           </div>
 
           <div>
+            <label htmlFor="inquiryType" className="block text-sm font-medium text-dark">
+              {dict.inquiryType}
+            </label>
+            <select
+              id="inquiryType"
+              name="inquiryType"
+              required
+              aria-required="true"
+              aria-invalid={!!errors.inquiryType}
+              aria-describedby={errors.inquiryType ? "inquiryType-error" : undefined}
+              className={inputClassName(!!errors.inquiryType)}
+              disabled={state.submitting}
+              defaultValue=""
+            >
+              <option value="" disabled>
+                {dict.inquiryTypePlaceholder}
+              </option>
+              {dict.inquiryTypeOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+            {errors.inquiryType && (
+              <p
+                id="inquiryType-error"
+                className="mt-1.5 text-xs text-red-500"
+                role="alert"
+              >
+                {errors.inquiryType}
+              </p>
+            )}
+            <ValidationError
+              prefix=""
+              field="inquiryType"
+              errors={state.errors}
+              className="mt-1.5 text-xs text-red-500"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="company" className="block text-sm font-medium text-dark">
+              {dict.company}
+              <span className="ml-1 font-normal text-muted">({dict.optional})</span>
+            </label>
+            <input
+              id="company"
+              name="company"
+              type="text"
+              autoComplete="organization"
+              placeholder={dict.companyPlaceholder}
+              className={inputClassName(false)}
+              disabled={state.submitting}
+            />
+          </div>
+
+          <div>
             <label htmlFor="subject" className="block text-sm font-medium text-dark">
               {dict.subject}
             </label>
@@ -214,10 +329,15 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
               aria-required="true"
               placeholder={dict.messagePlaceholder}
               aria-invalid={!!errors.message}
-              aria-describedby={errors.message ? "message-error" : undefined}
+              aria-describedby={
+                errors.message ? "message-error message-hint" : "message-hint"
+              }
               className={cn(inputClassName(!!errors.message), "resize-none")}
               disabled={state.submitting}
             />
+            <p id="message-hint" className="mt-1.5 text-xs text-muted">
+              {dict.messageHint}
+            </p>
             {errors.message && (
               <p id="message-error" className="mt-1.5 text-xs text-red-500" role="alert">
                 {errors.message}
@@ -238,6 +358,8 @@ export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactF
           >
             {state.submitting ? dict.submitting : dict.submit}
           </Button>
+
+          <p className="text-xs leading-relaxed text-muted">{dict.spamNotice}</p>
         </div>
       </form>
     </AnimateIn>
