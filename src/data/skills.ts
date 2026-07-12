@@ -1,4 +1,5 @@
 import {
+  Bot,
   Code2,
   Database,
   Globe,
@@ -14,6 +15,7 @@ export type SkillCategoryKey =
   | "database"
   | "devops"
   | "engineering"
+  | "ai"
   | "learning";
 
 export const skillCategoryKeys: SkillCategoryKey[] = [
@@ -22,6 +24,7 @@ export const skillCategoryKeys: SkillCategoryKey[] = [
   "database",
   "devops",
   "engineering",
+  "ai",
   "learning",
 ];
 
@@ -46,7 +49,7 @@ export const skillCategoryItems: Record<
     "API Integration",
   ],
   database: ["PostgreSQL", "MySQL", "MongoDB"],
-  devops: ["Git", "GitHub", "Docker", "Vercel", "VS Code", "Cursor AI"],
+  devops: ["Git", "GitHub", "Docker", "Vercel", "VS Code"],
   engineering: [
     "Clean Code",
     "Responsive Design",
@@ -55,6 +58,13 @@ export const skillCategoryItems: Record<
     "Performance Optimization",
     "Component Architecture",
     "Reusable Code",
+  ],
+  ai: [
+    "Cursor",
+    "Claude (Anthropic)",
+    "GitHub Copilot",
+    "Structured AI Workflow",
+    "Code Review & Ownership",
   ],
   learning: ["Cloud Computing", "CI/CD", "Microservices", "System Design"],
 };
@@ -65,5 +75,6 @@ export const skillCategoryIcons: Record<SkillCategoryKey, LucideIcon> = {
   database: Database,
   devops: Wrench,
   engineering: Code2,
+  ai: Bot,
   learning: Sparkles,
 };

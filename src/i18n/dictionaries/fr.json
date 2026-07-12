@@ -37,7 +37,8 @@
       "Développement Full Stack",
       "Plateformes E-commerce",
       "Applications Fintech",
-      "Livraison Production"
+      "Livraison Production",
+      "Workflow IA maîtrisé"
     ],
     "metrics": [
       {
@@ -133,7 +134,7 @@
   "skills": {
     "label": "Compétences techniques",
     "title": "Technologies que j'utilise",
-    "subtitle": "Une sélection des technologies, outils et frameworks que j'utilise pour concevoir, développer et déployer des applications modernes.",
+    "subtitle": "Une sélection des technologies, outils et frameworks que j'utilise pour concevoir, développer et déployer des applications modernes — avec une maîtrise méthodique des assistants IA.",
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
@@ -162,6 +163,10 @@
       "engineering": {
         "title": "Ingénierie logicielle",
         "description": "Bonnes pratiques appliquées lors du développement logiciel."
+      },
+      "ai": {
+        "title": "Développement assisté par l'IA",
+        "description": "Maîtrise d'assistants IA de code — intégrés de façon méthodique à mon workflow pour accélérer la livraison, tout en conservant la responsabilité de l'architecture, de la qualité du code et des décisions techniques."
       },
       "learning": {
         "title": "En cours d'apprentissage",
