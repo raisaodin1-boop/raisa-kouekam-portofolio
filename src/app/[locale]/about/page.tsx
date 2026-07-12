@@ -23,5 +23,10 @@ export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
 
-  return <AboutContent dict={dict.about} />;
+  return (
+    <AboutContent
+      dict={dict.about}
+      highlightsAriaLabel={dict.a11y.professionalHighlights}
+    />
+  );
 }

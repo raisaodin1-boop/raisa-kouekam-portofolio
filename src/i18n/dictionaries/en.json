@@ -11,6 +11,7 @@
     "switchToFrench": "Switch to French",
     "contactForm": "Contact form",
     "contactInformation": "Contact information",
+    "keyHighlights": "Key highlights",
     "professionalHighlights": "Professional highlights",
     "experienceTimeline": "Professional experience timeline",
     "skillCategories": "Skill categories",
@@ -57,6 +58,8 @@
       }
     ],
     "coreExpertise": "Core expertise",
+    "scrollIndicator": "Scroll down",
+    "profilePhotoLabel": "Raisa Kouekam professional portrait placeholder",
     "downloadResume": "Download Resume",
     "viewProjects": "View Projects",
     "featuredTitle": "Selected Work",
@@ -128,8 +131,9 @@
     }
   },
   "skills": {
-    "title": "Technical Skills",
-    "subtitle": "Technologies used to build, deploy and maintain production web applications — from UI to backend and cloud.",
+    "label": "Technical Skills",
+    "title": "Technologies I Work With",
+    "subtitle": "A selection of the technologies, tools and frameworks I use to design, develop and deploy modern software applications.",
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
@@ -137,6 +141,32 @@
       "cloud": "Cloud",
       "tools": "Tools",
       "languages": "Languages"
+    },
+    "items": {
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "Building responsive and modern user interfaces."
+      },
+      "backend": {
+        "title": "Backend Development",
+        "description": "Building secure, scalable and maintainable server-side applications."
+      },
+      "database": {
+        "title": "Database",
+        "description": "Designing and managing structured application data."
+      },
+      "devops": {
+        "title": "Tools & DevOps",
+        "description": "Tools used for development, collaboration and deployment."
+      },
+      "engineering": {
+        "title": "Software Engineering",
+        "description": "Best practices used during software development."
+      },
+      "learning": {
+        "title": "Currently Learning",
+        "description": "Technologies I continue exploring to improve my engineering skills."
+      }
     }
   },
   "projects": {
@@ -144,6 +174,7 @@
     "subtitle": "Products and platforms I've designed and built — from architecture to deployment.",
     "liveDemo": "Live Demo",
     "github": "GitHub",
+    "coverAltSuffix": "project screenshot",
     "features": "Key Features",
     "techStack": "Technologies",
     "items": {

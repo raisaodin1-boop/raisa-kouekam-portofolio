@@ -7,9 +7,10 @@ import type { AboutDictionary } from "@/components/about/types";
 
 type AboutContentProps = {
   dict: AboutDictionary;
+  highlightsAriaLabel: string;
 };
 
-export function AboutContent({ dict }: AboutContentProps) {
+export function AboutContent({ dict, highlightsAriaLabel }: AboutContentProps) {
   return (
     <section className="bg-white" aria-labelledby="about-page-heading">
       <div className="mx-auto max-w-[1200px] px-6 py-24 sm:py-28 lg:py-32">
@@ -28,7 +29,10 @@ export function AboutContent({ dict }: AboutContentProps) {
           <AboutBio paragraphs={dict.paragraphs} />
         </div>
 
-        <AboutHighlights highlights={dict.highlights} />
+        <AboutHighlights
+          highlights={dict.highlights}
+          ariaLabel={highlightsAriaLabel}
+        />
         <AboutTechStack
           label={dict.techStackLabel}
           technologies={dict.techStack}

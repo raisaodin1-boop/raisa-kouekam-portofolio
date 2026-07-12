@@ -7,11 +7,12 @@ type HomeMetric = {
 
 type HomeMetricsProps = {
   metrics: HomeMetric[];
+  ariaLabel: string;
 };
 
-export function HomeMetrics({ metrics }: HomeMetricsProps) {
+export function HomeMetrics({ metrics, ariaLabel }: HomeMetricsProps) {
   return (
-    <section className="border-y border-border bg-light-gray/50" aria-label="Key highlights">
+    <section className="border-y border-border bg-light-gray/50" aria-label={ariaLabel}>
       <div className="mx-auto max-w-[1200px] px-6 py-10 sm:py-12">
         <AnimateIn>
           <ul className="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-8">

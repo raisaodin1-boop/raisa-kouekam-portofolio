@@ -116,7 +116,7 @@ export const projectsData: Record<
       "Framer Motion",
       "i18n",
     ],
-    liveUrl: "#",
+    liveUrl: siteConfig.url,
     githubUrl: siteConfig.github,
     gradient: "from-teal-500/25 via-accent/10 to-primary/15",
   },

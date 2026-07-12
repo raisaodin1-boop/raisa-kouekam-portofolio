@@ -19,7 +19,10 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <Hero locale={locale as Locale} dict={dict} />
-      <HomeMetrics metrics={dict.home.metrics} />
+      <HomeMetrics
+        metrics={dict.home.metrics}
+        ariaLabel={dict.a11y.keyHighlights}
+      />
       <AboutPreview locale={locale as Locale} dict={dict} />
       <FeaturedProjects locale={locale as Locale} dict={dict} />
       <SkillsPreview locale={locale as Locale} dict={dict} />

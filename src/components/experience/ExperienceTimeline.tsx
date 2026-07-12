@@ -11,6 +11,7 @@ import { motion, type Variants } from "framer-motion";
 
 type ExperienceTimelineProps = {
   items: Record<ExperienceKey, ExperienceItemContent>;
+  ariaLabel: string;
 };
 
 const itemVariants: Variants = {
@@ -22,9 +23,9 @@ const itemVariants: Variants = {
   },
 };
 
-export function ExperienceTimeline({ items }: ExperienceTimelineProps) {
+export function ExperienceTimeline({ items, ariaLabel }: ExperienceTimelineProps) {
   return (
-    <ol className="relative" aria-label="Professional experience timeline">
+    <ol className="relative" aria-label={ariaLabel}>
       <div
         className="absolute bottom-0 left-[7px] top-0 w-px bg-border lg:left-1/2 lg:-translate-x-1/2"
         aria-hidden

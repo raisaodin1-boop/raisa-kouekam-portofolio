@@ -23,5 +23,5 @@ export default async function SkillsPage({ params }: Props) {
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
 
-  return <SkillsContent dict={dict.skills} />;
+  return <SkillsContent dict={dict.skills} categoriesAriaLabel={dict.a11y.skillCategories} />;
 }

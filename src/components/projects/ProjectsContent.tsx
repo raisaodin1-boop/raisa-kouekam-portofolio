@@ -51,6 +51,7 @@ export function ProjectsContent({ dict }: ProjectsContentProps) {
                 labels={{
                   liveDemo: dict.projects.liveDemo,
                   github: dict.projects.github,
+                  coverAltSuffix: dict.projects.coverAltSuffix,
                   features: dict.projects.features,
                   techStack: dict.projects.techStack,
                 }}

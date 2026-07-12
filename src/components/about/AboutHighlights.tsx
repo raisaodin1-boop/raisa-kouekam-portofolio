@@ -6,6 +6,7 @@ import { motion, type Variants } from "framer-motion";
 
 type AboutHighlightsProps = {
   highlights: AboutHighlight[];
+  ariaLabel: string;
 };
 
 const containerVariants: Variants = {
@@ -24,7 +25,7 @@ const cardVariants: Variants = {
   },
 };
 
-export function AboutHighlights({ highlights }: AboutHighlightsProps) {
+export function AboutHighlights({ highlights, ariaLabel }: AboutHighlightsProps) {
   return (
     <motion.div
       className="mt-16 grid gap-4 sm:mt-20 sm:grid-cols-2 sm:gap-5 lg:gap-6"
@@ -33,7 +34,7 @@ export function AboutHighlights({ highlights }: AboutHighlightsProps) {
       viewport={{ once: true, margin: "-40px" }}
       variants={containerVariants}
       role="list"
-      aria-label="Professional highlights"
+      aria-label={ariaLabel}
     >
       {highlights.map((highlight) => (
         <motion.div key={highlight.title} variants={cardVariants} role="listitem">

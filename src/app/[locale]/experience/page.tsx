@@ -23,5 +23,10 @@ export default async function ExperiencePage({ params }: Props) {
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
 
-  return <ExperienceContent dict={dict.experience} />;
+  return (
+    <ExperienceContent
+      dict={dict.experience}
+      timelineAriaLabel={dict.a11y.experienceTimeline}
+    />
+  );
 }

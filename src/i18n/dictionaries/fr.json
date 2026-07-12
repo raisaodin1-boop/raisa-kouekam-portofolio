@@ -11,6 +11,7 @@
     "switchToFrench": "Passer en français",
     "contactForm": "Formulaire de contact",
     "contactInformation": "Informations de contact",
+    "keyHighlights": "Points clés",
     "professionalHighlights": "Points forts professionnels",
     "experienceTimeline": "Chronologie de l'expérience professionnelle",
     "skillCategories": "Catégories de compétences",
@@ -58,6 +59,7 @@
     ],
     "coreExpertise": "Expertise clé",
     "scrollIndicator": "Faire défiler",
+    "profilePhotoLabel": "Portrait professionnel de Raisa Kouekam — placeholder",
     "downloadResume": "Télécharger le CV",
     "viewProjects": "Voir les projets",
     "featuredTitle": "Projets sélectionnés",
@@ -129,15 +131,42 @@
     }
   },
   "skills": {
-    "title": "Compétences techniques",
-    "subtitle": "Technologies utilisées pour construire, déployer et maintenir des applications web en production — du frontend au backend et au cloud.",
+    "label": "Compétences techniques",
+    "title": "Technologies que j'utilise",
+    "subtitle": "Une sélection des technologies, outils et frameworks que j'utilise pour concevoir, développer et déployer des applications modernes.",
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
       "database": "Base de données",
       "cloud": "Cloud",
       "tools": "Outils",
-      "languages": "Langages"
+      "languages": "Langues"
+    },
+    "items": {
+      "frontend": {
+        "title": "Développement Frontend",
+        "description": "Création d'interfaces utilisateur modernes et responsives."
+      },
+      "backend": {
+        "title": "Développement Backend",
+        "description": "Conception d'applications serveur sécurisées, évolutives et maintenables."
+      },
+      "database": {
+        "title": "Base de données",
+        "description": "Conception et gestion de données applicatives structurées."
+      },
+      "devops": {
+        "title": "Outils & DevOps",
+        "description": "Outils utilisés pour le développement, la collaboration et le déploiement."
+      },
+      "engineering": {
+        "title": "Ingénierie logicielle",
+        "description": "Bonnes pratiques appliquées lors du développement logiciel."
+      },
+      "learning": {
+        "title": "En cours d'apprentissage",
+        "description": "Technologies que j'explore pour continuer à progresser en ingénierie."
+      }
     }
   },
   "projects": {
@@ -145,6 +174,7 @@
     "subtitle": "Produits et plateformes que j'ai conçus et développés — de l'architecture au déploiement.",
     "liveDemo": "Démo live",
     "github": "GitHub",
+    "coverAltSuffix": "capture d'écran du projet",
     "features": "Fonctionnalités clés",
     "techStack": "Technologies",
     "items": {
