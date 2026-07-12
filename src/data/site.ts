@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Raisa Kouekam",
   email: "raisakouekam@gmail.com",
   github: "https://github.com/raisaodin1-boop",
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/raisa-kouekam-37778a127",
   whatsapp: "https://wa.me/237696565654",
   whatsappDisplay: "+237 696 565 654",
   resumeUrl: "",
