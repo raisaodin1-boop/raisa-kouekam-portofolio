@@ -2,15 +2,12 @@
 
 import { LinkButton } from "@/components/ui/LinkButton";
 import { ProfilePhoto } from "@/components/ui/ProfilePhoto";
-import { siteConfig } from "@/data/site";
-import { getResumeHref, getResumeLinkProps } from "@/lib/nav";
-import type { Locale } from "@/i18n/config";
+import { siteConfig, isConfiguredUrl } from "@/data/site";
 import type { Dictionary } from "@/i18n/get-dictionary";
-import { getLocalizedPath } from "@/lib/utils";
+import { Mail, Share2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 type HeroProps = {
-  locale: Locale;
   dict: Dictionary;
 };
 
@@ -20,9 +17,7 @@ const fadeUp = (delay = 0, visible = false) => ({
   transition: { duration: 0.5, delay, ease: "easeOut" as const },
 });
 
-export function Hero({ locale, dict }: HeroProps) {
-  const resumeHref = getResumeHref(locale, siteConfig.resumeUrl);
-  const resumeLink = getResumeLinkProps(siteConfig.resumeUrl);
+export function Hero({ locale: _locale, dict }: HeroProps) {
 
   return (
     <section
@@ -31,7 +26,6 @@ export function Hero({ locale, dict }: HeroProps) {
     >
       <div className="mx-auto max-w-[1200px] px-6 py-20 sm:py-28 lg:py-32">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16 xl:gap-24">
-          {/* Left — content */}
           <div className="order-1 text-center lg:text-left">
             <motion.p
               {...fadeUp(0)}
@@ -81,25 +75,27 @@ export function Hero({ locale, dict }: HeroProps) {
               className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start"
             >
               <LinkButton
-                href={getLocalizedPath("/projects", locale)}
+                href={`mailto:${siteConfig.email}`}
                 variant="primary"
                 className="w-full rounded-xl px-6 py-3 transition-colors duration-200 hover:bg-[#2563EB]/90 sm:w-auto"
               >
-                {dict.home.viewProjects}
+                <Mail className="h-4 w-4" aria-hidden />
+                {dict.home.emailMe}
               </LinkButton>
-              <LinkButton
-                href={resumeHref}
-                external={resumeLink.external}
-                download={resumeLink.download}
-                variant="outline"
-                className="w-full rounded-xl px-6 py-3 transition-colors duration-200 hover:border-primary hover:text-primary sm:w-auto"
-              >
-                {dict.home.downloadResume}
-              </LinkButton>
+              {isConfiguredUrl(siteConfig.linkedin) && (
+                <LinkButton
+                  href={siteConfig.linkedin}
+                  external
+                  variant="outline"
+                  className="w-full rounded-xl px-6 py-3 transition-colors duration-200 hover:border-primary hover:text-primary sm:w-auto"
+                >
+                  <Share2 className="h-4 w-4" aria-hidden />
+                  {dict.home.connectLinkedIn}
+                </LinkButton>
+              )}
             </motion.div>
           </div>
 
-          {/* Right — profile */}
           <motion.div
             {...fadeUp(0.2)}
             className="order-2 flex justify-center lg:justify-end"

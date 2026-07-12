@@ -27,6 +27,7 @@ export default async function AboutPage({ params }: Props) {
     <AboutContent
       dict={dict.about}
       highlightsAriaLabel={dict.a11y.professionalHighlights}
+      valuesAriaLabel={dict.a11y.coreValues}
     />
   );
 }

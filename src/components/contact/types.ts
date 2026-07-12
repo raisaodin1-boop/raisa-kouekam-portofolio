@@ -18,6 +18,7 @@ export type ContactDictionary = {
     linkedin: string;
     portfolio: string;
     email: string;
+    whatsapp: string;
   };
   socialLabel: string;
   cta: {

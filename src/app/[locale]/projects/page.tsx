@@ -23,5 +23,5 @@ export default async function ProjectsPage({ params }: Props) {
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
 
-  return <ProjectsContent dict={dict} />;
+  return <ProjectsContent locale={locale as Locale} dict={dict} />;
 }
