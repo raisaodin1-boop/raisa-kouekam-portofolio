@@ -1,4 +1,4 @@
-# Raisa Odin — Portfolio
+# Raisa Kouekam — Portfolio
 
 A premium, multilingual portfolio for an international Full Stack Software Engineer. Built with **Next.js 15**, **TypeScript**, **Tailwind CSS**, **Framer Motion**, and **Lucide React**.
 

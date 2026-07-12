@@ -30,7 +30,7 @@ export function Hero({ locale, dict }: HeroProps) {
             <div className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-white card-shadow sm:h-48 sm:w-48">
               <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10">
                 <span className="text-4xl font-bold text-primary sm:text-5xl">
-                  RO
+                  RK
                 </span>
               </div>
             </div>

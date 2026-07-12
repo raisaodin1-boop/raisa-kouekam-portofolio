@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Raisa Odin",
+  name: "Raisa Kouekam",
   email: "your.email@example.com",
   github: "https://github.com/raisaodin1-boop",
   linkedin: "https://linkedin.com/in/your-profile",
