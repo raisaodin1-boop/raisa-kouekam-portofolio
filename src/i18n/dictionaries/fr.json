@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "title": "Raisa Odin — Ingénieure Full Stack",
+    "description": "Ingénieure Full Stack spécialisée dans les applications web évolutives, les plateformes e-commerce et les produits digitaux pour des équipes internationales."
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "menu": "Ouvrir le menu",
+    "close": "Fermer le menu"
+  },
+  "home": {
+    "greeting": "Ingénieure Full Stack",
+    "name": "Raisa Odin",
+    "subtitle": "Je conçois des applications web évolutives, des plateformes e-commerce et des produits digitaux qui résolvent de vrais problèmes business.",
+    "downloadResume": "Télécharger le CV",
+    "viewProjects": "Voir les projets",
+    "featuredTitle": "Projets sélectionnés",
+    "featuredSubtitle": "Un aperçu des projets et produits que j'ai contribué à réaliser.",
+    "viewAllProjects": "Voir tous les projets"
+  },
+  "about": {
+    "title": "À propos",
+    "subtitle": "Ingénieure, créatrice et résolveuse de problèmes, focalisée sur la livraison de logiciels de haute qualité.",
+    "mission": {
+      "title": "Mission",
+      "text": "Concevoir et développer des logiciels fiables et évolutifs qui créent une valeur mesurable pour les entreprises et les utilisateurs à l'international."
+    },
+    "passion": {
+      "title": "Passion",
+      "text": "Je suis passionnée par la création d'expériences utilisateur élégantes, soutenues par une ingénierie robuste — du frontend soigné aux systèmes backend résilients."
+    },
+    "experience": {
+      "title": "Expérience",
+      "text": "Je travaille sur l'ensemble de la stack, en collaboration avec des équipes au Canada, en France, en Allemagne, au Royaume-Uni et aux États-Unis."
+    },
+    "values": {
+      "title": "Valeurs",
+      "items": [
+        "La qualité avant la quantité — chaque détail compte",
+        "Communication claire à travers les cultures et fuseaux horaires",
+        "Apprentissage continu et innovation pragmatique",
+        "Design centré utilisateur avec excellence technique"
+      ]
+    }
+  },
+  "skills": {
+    "title": "Compétences",
+    "subtitle": "Technologies et outils que j'utilise pour créer des applications modernes et prêtes pour la production.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de données",
+      "cloud": "Cloud",
+      "tools": "Outils",
+      "languages": "Langages"
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Produits et plateformes que j'ai conçus et développés — de l'idée au déploiement.",
+    "liveDemo": "Démo",
+    "github": "GitHub",
+    "features": "Fonctionnalités",
+    "techStack": "Stack technique",
+    "items": {
+      "yorix": {
+        "title": "Yorix",
+        "description": "Une plateforme digitale moderne conçue pour optimiser les opérations business et améliorer l'engagement client.",
+        "features": [
+          "Application web responsive",
+          "Authentification et gestion des rôles",
+          "Tableau de bord avec analytics en temps réel",
+          "Intégration API RESTful"
+        ]
+      },
+      "hodix": {
+        "title": "HODIX",
+        "description": "Une solution e-commerce et de gestion d'inventaire conçue pour la scalabilité et la performance.",
+        "features": [
+          "Catalogue produits et recherche",
+          "Workflow de gestion des commandes",
+          "Intégration passerelle de paiement",
+          "Panneau admin pour l'inventaire"
+        ]
+      },
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "Ce portfolio personnel — une vitrine rapide, accessible et multilingue construite avec Next.js 15.",
+        "features": [
+          "Internationalisation (EN/FR)",
+          "Optimisé SEO avec Open Graph",
+          "Animations fluides et design responsive",
+          "Prêt pour le déploiement sur Vercel"
+        ]
+      }
+    }
+  },
+  "experience": {
+    "title": "Expérience",
+    "subtitle": "Parcours professionnel et rôles en ingénierie logicielle.",
+    "present": "Aujourd'hui",
+    "items": {
+      "role1": {
+        "title": "Ingénieure Full Stack",
+        "company": "Nom de l'entreprise",
+        "period": "2023 — Aujourd'hui",
+        "location": "Remote — International",
+        "description": "Conception et maintenance d'applications web et de plateformes e-commerce pour des clients internationaux. Pilotage du développement de la conception au déploiement."
+      },
+      "role2": {
+        "title": "Développeuse Logiciel",
+        "company": "Nom de l'entreprise",
+        "period": "2021 — 2023",
+        "location": "Remote",
+        "description": "Développement d'interfaces frontend et d'APIs backend. Collaboration avec des équipes pluridisciplinaires pour livrer les jalons produit."
+      },
+      "role3": {
+        "title": "Développeuse Junior",
+        "company": "Nom de l'entreprise",
+        "period": "2019 — 2021",
+        "location": "Sur site",
+        "description": "Contribution à des projets web, apprentissage des bonnes pratiques en qualité de code, tests et méthodes agiles."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Ouverte aux opportunités au Canada, en France, en Allemagne, au Royaume-Uni et aux États-Unis. Restons en contact.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "whatsapp": "WhatsApp",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "vous@exemple.com",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-moi de votre projet ou opportunité…",
+      "submit": "Envoyer",
+      "success": "Merci ! Votre message a bien été reçu.",
+      "nameRequired": "Le nom est requis",
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Veuillez entrer un email valide",
+      "messageRequired": "Le message est requis"
+    }
+  },
+  "footer": {
+    "builtWith": "Construit avec Next.js, TypeScript & Tailwind CSS",
+    "rights": "Tous droits réservés."
+  }
+}
