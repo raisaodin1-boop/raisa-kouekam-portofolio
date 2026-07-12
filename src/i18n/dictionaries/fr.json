@@ -59,7 +59,7 @@
     ],
     "coreExpertise": "Expertise clé",
     "scrollIndicator": "Faire défiler",
-    "profilePhotoLabel": "Portrait professionnel de Raisa Kouekam — placeholder",
+    "profilePhotoLabel": "Raisa Kouekam — portrait professionnel",
     "downloadResume": "Télécharger le CV",
     "viewProjects": "Voir les projets",
     "featuredTitle": "Projets sélectionnés",
@@ -118,7 +118,7 @@
       "GitHub",
       "Docker"
     ],
-    "portraitLabel": "Portrait professionnel de Raisa Kouekam — placeholder",
+    "portraitLabel": "Raisa Kouekam — portrait professionnel",
     "portraitCaption": "Portrait",
     "values": {
       "title": "Valeurs",

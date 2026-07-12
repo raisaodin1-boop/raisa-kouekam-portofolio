@@ -22,10 +22,7 @@ export function AboutContent({ dict, highlightsAriaLabel }: AboutContentProps) {
         />
 
         <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
-          <AboutPortrait
-            label={dict.portraitLabel}
-            caption={dict.portraitCaption}
-          />
+          <AboutPortrait label={dict.portraitLabel} />
           <AboutBio paragraphs={dict.paragraphs} />
         </div>
 
