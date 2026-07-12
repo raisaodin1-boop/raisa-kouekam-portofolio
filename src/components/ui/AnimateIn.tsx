@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
 
 type AnimateInProps = {
@@ -12,10 +12,10 @@ type AnimateInProps = {
 };
 
 const directionOffset = {
-  up: { y: 24, x: 0 },
-  down: { y: -24, x: 0 },
-  left: { x: 24, y: 0 },
-  right: { x: -24, y: 0 },
+  up: { y: 16, x: 0 },
+  down: { y: -16, x: 0 },
+  left: { x: 16, y: 0 },
+  right: { x: -16, y: 0 },
   none: { x: 0, y: 0 },
 };
 
@@ -24,9 +24,14 @@ export function AnimateIn({
   className,
   delay = 0,
   direction = "up",
-  duration = 0.5,
+  duration = 0.4,
 }: AnimateInProps) {
+  const shouldReduceMotion = useReducedMotion();
   const offset = directionOffset[direction];
+
+  if (shouldReduceMotion) {
+    return <div className={className}>{children}</div>;
+  }
 
   const variants: Variants = {
     hidden: { opacity: 0, x: offset.x, y: offset.y },
@@ -34,7 +39,7 @@ export function AnimateIn({
       opacity: 1,
       x: 0,
       y: 0,
-      transition: { duration, delay, ease: [0.25, 0.4, 0.25, 1] },
+      transition: { duration, delay, ease: "easeOut" },
     },
   };
 

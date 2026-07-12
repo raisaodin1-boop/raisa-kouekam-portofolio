@@ -1,7 +1,8 @@
 "use client";
 
 import { LinkButton } from "@/components/ui/LinkButton";
-import { isConfiguredUrl, siteConfig } from "@/data/site";
+import { siteConfig } from "@/data/site";
+import { getResumeHref, getResumeLinkProps } from "@/lib/nav";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/get-dictionary";
 import { getLocalizedPath } from "@/lib/utils";
@@ -19,9 +20,8 @@ const fadeUp = (delay = 0) => ({
 });
 
 export function Hero({ locale, dict }: HeroProps) {
-  const resumeHref = isConfiguredUrl(siteConfig.resumeUrl)
-    ? siteConfig.resumeUrl
-    : getLocalizedPath("/contact", locale);
+  const resumeHref = getResumeHref(locale, siteConfig.resumeUrl);
+  const resumeLink = getResumeLinkProps(siteConfig.resumeUrl);
 
   return (
     <section
@@ -74,7 +74,8 @@ export function Hero({ locale, dict }: HeroProps) {
               </LinkButton>
               <LinkButton
                 href={resumeHref}
-                external={isConfiguredUrl(siteConfig.resumeUrl)}
+                external={resumeLink.external}
+                download={resumeLink.download}
                 variant="outline"
                 className="w-full rounded-xl px-6 py-3 transition-colors duration-200 hover:border-[#2563EB] hover:text-[#2563EB] sm:w-auto"
                 aria-label={dict.home.downloadResume}
