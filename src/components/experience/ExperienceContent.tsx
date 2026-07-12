@@ -1,5 +1,3 @@
-"use client";
-
 import { ExperienceAchievements } from "@/components/experience/ExperienceAchievements";
 import { ExperienceSectionHeader } from "@/components/experience/ExperienceSectionHeader";
 import { ExperienceTimeline } from "@/components/experience/ExperienceTimeline";
@@ -17,6 +15,7 @@ export function ExperienceContent({ dict }: ExperienceContentProps) {
           label={dict.label}
           title={dict.title}
           subtitle={dict.subtitle}
+          headingId="experience-page-heading"
         />
 
         <ExperienceTimeline items={dict.items} />

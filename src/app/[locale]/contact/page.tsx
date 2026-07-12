@@ -23,5 +23,5 @@ export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
   const dict = await getDictionary(locale as Locale);
 
-  return <ContactContent dict={dict.contact} />;
+  return <ContactContent dict={dict.contact} a11y={dict.a11y} />;
 }

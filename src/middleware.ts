@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { defaultLocale, locales } from "@/i18n/config";
+import { locales } from "@/i18n/config";
+import { parseAcceptLanguage } from "@/lib/locale";
 
 function getLocale(request: NextRequest): string {
   const cookie = request.cookies.get("locale")?.value;
@@ -8,12 +9,7 @@ function getLocale(request: NextRequest): string {
     return cookie;
   }
 
-  const acceptLanguage = request.headers.get("accept-language");
-  if (acceptLanguage?.toLowerCase().includes("fr")) {
-    return "fr";
-  }
-
-  return defaultLocale;
+  return parseAcceptLanguage(request.headers.get("accept-language"));
 }
 
 export function middleware(request: NextRequest) {

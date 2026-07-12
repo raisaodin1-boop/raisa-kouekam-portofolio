@@ -37,16 +37,16 @@ export function AboutPreview({ locale, dict }: AboutPreviewProps) {
 
           <AnimateIn direction="right" delay={0.15}>
             <div className="grid gap-4 sm:grid-cols-2">
-              {dict.about.values.items.slice(0, 4).map((item, i) => (
+              {dict.about.highlights.map((item) => (
                 <div
-                  key={item}
+                  key={item.title}
                   className="rounded-2xl border border-border bg-white p-5 card-shadow transition-all duration-300 hover:-translate-y-0.5 hover:card-shadow-hover"
                 >
-                  <span className="text-xs font-bold text-primary">
-                    0{i + 1}
-                  </span>
+                  <h3 className="text-sm font-semibold text-dark">
+                    {item.title}
+                  </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">
-                    {item}
+                    {item.description}
                   </p>
                 </div>
               ))}

@@ -1,5 +1,3 @@
-"use client";
-
 import { FooterBrand } from "@/components/layout/FooterBrand";
 import { FooterLinks } from "@/components/layout/FooterLinks";
 import { FooterSocial } from "@/components/layout/FooterSocial";
@@ -25,14 +23,18 @@ export function Footer({ locale, dict }: FooterProps) {
             dict={dict}
             title={dict.footer.quickLinks}
           />
-          <FooterSocial dict={dict.footer} />
+          <FooterSocial
+            title={dict.footer.social}
+            labels={dict.contact.social}
+            ariaLabel={dict.a11y.socialLinks}
+          />
         </div>
 
         <div className="mt-12 border-t border-border pt-8 text-center sm:mt-14">
           <p className="text-sm text-muted">
             © {year} {siteConfig.name}. {dict.footer.rights}
           </p>
-          <p className="mt-2 text-xs text-muted/80">{dict.footer.builtWith}</p>
+          <p className="mt-2 text-xs text-muted">{dict.footer.builtWith}</p>
         </div>
       </div>
     </footer>

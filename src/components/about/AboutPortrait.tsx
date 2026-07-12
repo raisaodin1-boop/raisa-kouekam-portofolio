@@ -3,9 +3,10 @@ import { User } from "lucide-react";
 
 type AboutPortraitProps = {
   label: string;
+  caption: string;
 };
 
-export function AboutPortrait({ label }: AboutPortraitProps) {
+export function AboutPortrait({ label, caption }: AboutPortraitProps) {
   return (
     <AnimateIn direction="left" delay={0.1}>
       <div
@@ -15,10 +16,10 @@ export function AboutPortrait({ label }: AboutPortraitProps) {
       >
         <div className="flex h-full flex-col items-center justify-center gap-4 p-8">
           <div className="flex h-20 w-20 items-center justify-center rounded-full border border-border bg-white shadow-sm">
-            <User className="h-9 w-9 text-muted/60" strokeWidth={1.5} aria-hidden />
+            <User className="h-9 w-9 text-muted" strokeWidth={1.5} aria-hidden />
           </div>
-          <span className="text-sm font-medium tracking-wide text-muted/70">
-            Portrait
+          <span className="text-sm font-medium tracking-wide text-muted">
+            {caption}
           </span>
         </div>
       </div>

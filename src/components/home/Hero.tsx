@@ -61,6 +61,20 @@ export function Hero({ locale, dict }: HeroProps) {
               {dict.home.subtitle}
             </motion.p>
 
+            <motion.ul
+              {...fadeUp(0.28)}
+              className="mx-auto mt-8 flex max-w-lg flex-wrap justify-center gap-2 lg:mx-0 lg:justify-start"
+              aria-label={dict.home.coreExpertise}
+            >
+              {dict.home.highlights.map((item) => (
+                <li key={item}>
+                  <span className="inline-block rounded-full border border-border bg-light-gray px-3 py-1.5 text-xs font-medium text-dark sm:text-sm">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </motion.ul>
+
             <motion.div
               {...fadeUp(0.32)}
               className="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start"
@@ -77,8 +91,7 @@ export function Hero({ locale, dict }: HeroProps) {
                 external={resumeLink.external}
                 download={resumeLink.download}
                 variant="outline"
-                className="w-full rounded-xl px-6 py-3 transition-colors duration-200 hover:border-[#2563EB] hover:text-[#2563EB] sm:w-auto"
-                aria-label={dict.home.downloadResume}
+                className="w-full rounded-xl px-6 py-3 transition-colors duration-200 hover:border-primary hover:text-primary sm:w-auto"
               >
                 {dict.home.downloadResume}
               </LinkButton>

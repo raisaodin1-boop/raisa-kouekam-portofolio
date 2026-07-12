@@ -21,15 +21,17 @@ const projectIcons: Record<ProjectKey, LucideIcon> = {
 
 export function ProjectsContent({ dict }: ProjectsContentProps) {
   return (
-    <PageContainer>
+    <PageContainer as="section" aria-labelledby="projects-page-heading">
       <AnimateIn>
         <SectionHeading
           title={dict.projects.title}
           subtitle={dict.projects.subtitle}
+          level="h1"
+          headingId="projects-page-heading"
         />
       </AnimateIn>
 
-      <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-8 lg:grid-cols-2">
         {projectKeys.map((key, index) => {
           const project = dict.projects.items[key];
           const data = projectsData[key];
