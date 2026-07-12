@@ -37,7 +37,8 @@
       "Full Stack Development",
       "E-commerce Platforms",
       "Fintech Applications",
-      "Production-Ready Delivery"
+      "Production-Ready Delivery",
+      "AI-Augmented Workflow"
     ],
     "metrics": [
       {
@@ -133,7 +134,7 @@
   "skills": {
     "label": "Technical Skills",
     "title": "Technologies I Work With",
-    "subtitle": "A selection of the technologies, tools and frameworks I use to design, develop and deploy modern software applications.",
+    "subtitle": "A selection of the technologies, tools and frameworks I use to design, develop and deploy modern software applications — including methodical AI-assisted workflows.",
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
@@ -161,7 +162,11 @@
       },
       "engineering": {
         "title": "Software Engineering",
-        "description": "Best practices used during software development."
+        "description": "Best practices applied during software development."
+      },
+      "ai": {
+        "title": "AI-Assisted Development",
+        "description": "Proficient with AI coding assistants — integrated methodically into my workflow to accelerate delivery, while I retain full ownership of architecture, code quality and technical decisions."
       },
       "learning": {
         "title": "Currently Learning",
