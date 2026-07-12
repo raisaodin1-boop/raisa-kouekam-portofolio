@@ -107,6 +107,15 @@ export const navItems = [
   { key: "contact", href: "/contact" },
 ] as const;
 
+export const navbarItems = [
+  { key: "home", href: "" },
+  { key: "about", href: "/about" },
+  { key: "skills", href: "/skills" },
+  { key: "projects", href: "/projects" },
+  { key: "experience", href: "/experience" },
+  { key: "contact", href: "/contact" },
+] as const;
+
 export const featuredProjectKeys: ProjectKey[] = ["yorix", "hodix"];
 
 export const previewSkillKeys = [

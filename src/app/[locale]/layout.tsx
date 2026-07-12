@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
+import { Navbar } from "@/components/layout/Navbar";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -34,7 +34,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <>
       <SkipLink label={dict.meta.skipToContent} />
-      <Header locale={locale as Locale} dict={dict} />
+      <Navbar locale={locale as Locale} dict={dict} />
       <main id="main-content">{children}</main>
       <Footer locale={locale as Locale} dict={dict} />
     </>
