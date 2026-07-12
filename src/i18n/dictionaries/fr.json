@@ -121,13 +121,13 @@
         ]
       },
       "digitalGroup": {
-        "title": "Yorix Digital Group",
-        "description": "Une plateforme de services digitaux proposant des solutions web modernes, une présence de marque et des outils business — conçue pour aider les entreprises à lancer et scaler leur activité en ligne.",
+        "title": "Yorix Digital",
+        "description": "Un logiciel interne offline de gestion business conçu pour les opérations Yorix — workflows, données et processus quotidiens dans un environnement sécurisé et autonome.",
         "features": [
-          "Pages vitrine professionnelles et présence web corporate",
-          "Interface responsive conçue pour les clients business",
-          "Architecture modulaire pour des produits digitaux évolutifs",
-          "Stack prête pour le déploiement sur infrastructure cloud moderne"
+          "Architecture offline-first pour un usage fiable sur le terrain",
+          "Gestion des workflows et des données opérationnelles",
+          "Accès sécurisé réservé aux membres autorisés de l'équipe",
+          "Déployé sur Vercel pour un accès interne contrôlé"
         ]
       }
     }
