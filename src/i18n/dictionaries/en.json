@@ -45,20 +45,46 @@
     "getInTouch": "Get in touch"
   },
   "about": {
-    "title": "About Me",
-    "subtitle": "Engineer, builder, and problem solver focused on delivering high-quality software for global teams.",
-    "mission": {
-      "title": "Mission",
-      "text": "To design and build reliable, scalable software that creates measurable value for businesses and users across global markets — from MVP to production at scale."
-    },
-    "passion": {
-      "title": "Passion",
-      "text": "I'm passionate about crafting elegant user experiences backed by robust engineering. I enjoy turning complex requirements into intuitive products with clean, maintainable code."
-    },
-    "experience": {
-      "title": "Background",
-      "text": "I work across the full stack, partnering with teams in Canada, France, Germany, the UK and the US. My experience spans e-commerce marketplaces, fintech applications and custom web platforms."
-    },
+    "label": "About Me",
+    "title": "Building Digital Products That Make an Impact",
+    "subtitle": "Passionate about designing and developing scalable digital solutions that solve real-world business problems.",
+    "paragraphs": [
+      "I'm a Full Stack Software Engineer passionate about building modern web applications and digital products that create meaningful value for users and businesses.",
+      "I design complete solutions — from intuitive user interfaces to robust backend architecture and thoughtful database management — ensuring every layer works together seamlessly.",
+      "My experience includes developing e-commerce platforms, fintech applications and business management software, turning complex requirements into reliable, production-ready products.",
+      "I believe in continuous learning, writing clean code, collaborating effectively with teams and building software designed to deliver long-term value."
+    ],
+    "highlights": [
+      {
+        "title": "Full Stack Development",
+        "description": "Designing complete web applications from frontend to backend."
+      },
+      {
+        "title": "Problem Solving",
+        "description": "Building software that solves real business challenges."
+      },
+      {
+        "title": "Product Thinking",
+        "description": "Creating digital products focused on users, quality and growth."
+      },
+      {
+        "title": "Continuous Learning",
+        "description": "Always learning modern technologies and best engineering practices."
+      }
+    ],
+    "techStackLabel": "Technologies I work with",
+    "techStack": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Git",
+      "GitHub",
+      "Docker"
+    ],
+    "portraitLabel": "Raisa Kouekam professional portrait placeholder",
     "values": {
       "title": "Core Values",
       "items": [

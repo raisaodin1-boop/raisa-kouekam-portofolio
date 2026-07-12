@@ -45,20 +45,46 @@
     "getInTouch": "Me contacter"
   },
   "about": {
-    "title": "À propos",
-    "subtitle": "Ingénieure, créatrice et résolveuse de problèmes, focalisée sur la livraison de logiciels de haute qualité pour des équipes internationales.",
-    "mission": {
-      "title": "Mission",
-      "text": "Concevoir et développer des logiciels fiables et évolutifs qui créent une valeur mesurable pour les entreprises et les utilisateurs — du MVP à la production à grande échelle."
-    },
-    "passion": {
-      "title": "Passion",
-      "text": "Je suis passionnée par la création d'expériences utilisateur élégantes, soutenues par une ingénierie robuste. J'aime transformer des exigences complexes en produits intuitifs avec un code propre et maintenable."
-    },
-    "experience": {
-      "title": "Parcours",
-      "text": "Je travaille sur l'ensemble de la stack avec des équipes au Canada, en France, en Allemagne, au Royaume-Uni et aux États-Unis. Mon expérience couvre les marketplaces e-commerce, le fintech et les plateformes web sur mesure."
-    },
+    "label": "À propos",
+    "title": "Créer des produits digitaux à fort impact",
+    "subtitle": "Passionnée par la conception et le développement de solutions digitales évolutives qui résolvent de vrais problèmes business.",
+    "paragraphs": [
+      "Je suis Ingénieure Full Stack, passionnée par la création d'applications web modernes et de produits digitaux qui apportent une valeur concrète aux utilisateurs et aux entreprises.",
+      "Je conçois des solutions complètes — des interfaces intuitives à une architecture backend robuste et une gestion réfléchie des bases de données — en veillant à ce que chaque couche fonctionne en harmonie.",
+      "Mon expérience inclut le développement de plateformes e-commerce, d'applications fintech et de logiciels de gestion d'entreprise, en transformant des exigences complexes en produits fiables et prêts pour la production.",
+      "Je crois en l'apprentissage continu, à l'écriture de code propre, à la collaboration efficace au sein des équipes et à la construction de logiciels conçus pour créer de la valeur à long terme."
+    ],
+    "highlights": [
+      {
+        "title": "Développement Full Stack",
+        "description": "Conception d'applications web complètes, du frontend au backend."
+      },
+      {
+        "title": "Résolution de problèmes",
+        "description": "Création de logiciels qui répondent à de vrais enjeux business."
+      },
+      {
+        "title": "Vision produit",
+        "description": "Conception de produits digitaux centrés sur les utilisateurs, la qualité et la croissance."
+      },
+      {
+        "title": "Apprentissage continu",
+        "description": "Toujours en veille sur les technologies modernes et les meilleures pratiques d'ingénierie."
+      }
+    ],
+    "techStackLabel": "Technologies que j'utilise",
+    "techStack": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Git",
+      "GitHub",
+      "Docker"
+    ],
+    "portraitLabel": "Portrait professionnel de Raisa Kouekam — placeholder",
     "values": {
       "title": "Valeurs",
       "items": [

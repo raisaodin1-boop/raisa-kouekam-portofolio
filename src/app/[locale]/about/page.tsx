@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const dict = await getDictionary(locale as Locale);
   return createPageMetadata({
     locale: locale as Locale,
-    pageTitle: dict.about.title,
+    pageTitle: dict.about.label,
     pageDescription: dict.about.subtitle,
     path: "/about",
   });
