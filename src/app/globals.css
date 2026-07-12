@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #2563eb;
+  --dark: #0f172a;
+  --background: #ffffff;
+  --light-gray: #f8fafc;
+  --accent: #14b8a6;
+  --muted: #64748b;
+  --border: #e2e8f0;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-dark: var(--dark);
+  --color-background: var(--background);
+  --color-light-gray: var(--light-gray);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--dark);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--primary) 20%, transparent);
+  color: var(--dark);
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--primary) 8%, white) 0%,
+    color-mix(in srgb, var(--accent) 6%, white) 50%,
+    white 100%
+  );
+}
+
+.glass {
+  background: color-mix(in srgb, white 80%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.card-shadow {
+  box-shadow:
+    0 1px 3px color-mix(in srgb, var(--dark) 4%, transparent),
+    0 4px 24px color-mix(in srgb, var(--dark) 3%, transparent);
+}
+
+.card-shadow-hover {
+  box-shadow:
+    0 4px 12px color-mix(in srgb, var(--dark) 6%, transparent),
+    0 8px 32px color-mix(in srgb, var(--primary) 8%, transparent);
+}
+
+.hover-lift {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}

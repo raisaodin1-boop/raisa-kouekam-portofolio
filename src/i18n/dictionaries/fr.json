@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "title": "Raisa Kouekam — Ingénieure Full Stack",
+    "description": "Ingénieure Full Stack spécialisée dans les applications web évolutives, les marketplaces e-commerce, les plateformes fintech et les produits digitaux pour des équipes internationales.",
+    "skipToContent": "Aller au contenu principal"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "experience": "Expérience",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "menu": "Ouvrir le menu",
+    "close": "Fermer le menu"
+  },
+  "home": {
+    "greeting": "Ingénieure Full Stack",
+    "name": "Raisa Kouekam",
+    "subtitle": "Je conçois des applications web évolutives, des plateformes e-commerce et des produits digitaux qui résolvent de vrais problèmes business.",
+    "badge": "Disponible pour des opportunités internationales",
+    "highlights": [
+      "Développement Full Stack",
+      "Solutions E-commerce",
+      "Applications Fintech",
+      "Logiciels métier"
+    ],
+    "scrollIndicator": "Faire défiler",
+    "downloadResume": "Télécharger le CV",
+    "viewProjects": "Voir les projets",
+    "featuredTitle": "Projets sélectionnés",
+    "featuredSubtitle": "Des produits récents — marketplaces, fintech et outils développeur — conçus pour la scalabilité et l'impact.",
+    "viewAllProjects": "Voir tous les projets",
+    "aboutTitle": "À propos",
+    "aboutText": "Je suis Ingénieure Full Stack, focalisée sur l'architecture propre, la performance et l'expérience utilisateur. Je collabore avec des équipes internationales pour livrer des produits fiables et prêts pour la production.",
+    "learnMore": "En savoir plus",
+    "skillsTitle": "Expertise technique",
+    "skillsSubtitle": "Un profil équilibré entre frontend, backend, cloud et outils.",
+    "viewAllSkills": "Voir toutes les compétences",
+    "experienceTitle": "Expérience professionnelle",
+    "experienceSubtitle": "Développement logiciel au sein de startups et d'équipes remote internationales.",
+    "viewExperience": "Voir toute l'expérience",
+    "contactTitle": "Travaillons ensemble",
+    "contactSubtitle": "Ouverte aux postes CDI et missions freelance au Canada, en France, en Allemagne, au Royaume-Uni et aux États-Unis.",
+    "getInTouch": "Me contacter"
+  },
+  "about": {
+    "title": "À propos",
+    "subtitle": "Ingénieure, créatrice et résolveuse de problèmes, focalisée sur la livraison de logiciels de haute qualité pour des équipes internationales.",
+    "mission": {
+      "title": "Mission",
+      "text": "Concevoir et développer des logiciels fiables et évolutifs qui créent une valeur mesurable pour les entreprises et les utilisateurs — du MVP à la production à grande échelle."
+    },
+    "passion": {
+      "title": "Passion",
+      "text": "Je suis passionnée par la création d'expériences utilisateur élégantes, soutenues par une ingénierie robuste. J'aime transformer des exigences complexes en produits intuitifs avec un code propre et maintenable."
+    },
+    "experience": {
+      "title": "Parcours",
+      "text": "Je travaille sur l'ensemble de la stack avec des équipes au Canada, en France, en Allemagne, au Royaume-Uni et aux États-Unis. Mon expérience couvre les marketplaces e-commerce, le fintech et les plateformes web sur mesure."
+    },
+    "values": {
+      "title": "Valeurs",
+      "items": [
+        "La qualité avant la quantité — chaque détail compte en production",
+        "Communication claire à travers les cultures, langues et fuseaux horaires",
+        "Apprentissage continu avec une innovation pragmatique et orientée résultats",
+        "Design centré utilisateur couplé à l'excellence technique"
+      ]
+    }
+  },
+  "skills": {
+    "title": "Compétences",
+    "subtitle": "Technologies et outils que j'utilise pour concevoir, développer et déployer des applications modernes prêtes pour la production.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de données",
+      "cloud": "Cloud",
+      "tools": "Outils",
+      "languages": "Langages"
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Produits et plateformes que j'ai conçus et développés — de l'architecture au déploiement.",
+    "liveDemo": "Démo live",
+    "github": "GitHub",
+    "features": "Fonctionnalités clés",
+    "techStack": "Technologies",
+    "items": {
+      "yorix": {
+        "title": "Yorix Marketplace",
+        "description": "Une marketplace e-commerce multi-vendeurs connectant acheteurs et vendeurs avec paiements sécurisés, inventaire en temps réel et une expérience d'achat fluide.",
+        "features": [
+          "Vitrine multi-vendeurs avec tableaux de bord vendeurs",
+          "Paiement sécurisé via intégration Stripe",
+          "Recherche avancée, filtres et catégories produits",
+          "Suivi de commandes et notifications email automatisées"
+        ]
+      },
+      "hodix": {
+        "title": "HODIX Fintech",
+        "description": "La première super-app africaine de tontines digitales et d'identité financière vérifiable — transformant l'épargne communautaire informelle en réputation financière pour les marchés émergents et la diaspora.",
+        "features": [
+          "Tontines digitales avec cycles automatisés, rappels et suivi des membres",
+          "Trust Score (0–1000) et niveaux d'identité — Bronze à Platinum",
+          "Certificats d'Identité Financière vérifiables (QR, hash, lien public)",
+          "Wallet multi-devises (XAF, EUR, USD) avec MTN & Orange Money",
+          "Console admin : membres, validation KYC et gestion des tontines"
+        ]
+      },
+      "portfolio": {
+        "title": "Portfolio Personnel",
+        "description": "Un portfolio développeur prêt pour la production — optimisé pour la performance, l'accessibilité et les recruteurs internationaux.",
+        "features": [
+          "Support bilingue anglais et français (EN/FR)",
+          "Optimisé SEO avec Open Graph et métadonnées structurées",
+          "Animations fluides et layout entièrement responsive",
+          "Architecture prête pour le déploiement sur Vercel"
+        ]
+      },
+      "digitalGroup": {
+        "title": "Yorix Digital",
+        "description": "Un logiciel interne offline de gestion business conçu pour les opérations Yorix — workflows, données et processus quotidiens dans un environnement sécurisé et autonome.",
+        "features": [
+          "Architecture offline-first pour un usage fiable sur le terrain",
+          "Gestion des workflows et des données opérationnelles",
+          "Accès sécurisé réservé aux membres autorisés de l'équipe",
+          "Déployé sur Vercel pour un accès interne contrôlé"
+        ]
+      }
+    }
+  },
+  "experience": {
+    "title": "Expérience",
+    "subtitle": "Parcours professionnel en développement full stack et livraison produit.",
+    "present": "Aujourd'hui",
+    "items": {
+      "role1": {
+        "title": "Ingénieure Full Stack",
+        "company": "Nom de l'entreprise — Placeholder",
+        "period": "2023 — Aujourd'hui",
+        "location": "Remote — International",
+        "description": "Pilotage du développement d'applications web et de plateformes e-commerce pour des clients internationaux. Responsable des fonctionnalités de la conception technique au déploiement."
+      },
+      "role2": {
+        "title": "Développeuse Logiciel",
+        "company": "Nom de l'entreprise — Placeholder",
+        "period": "2021 — 2023",
+        "location": "Remote",
+        "description": "Développement d'interfaces frontend responsive et d'APIs REST backend. Collaboration avec designers et product managers en sprints agiles."
+      },
+      "role3": {
+        "title": "Développeuse Web Junior",
+        "company": "Nom de l'entreprise — Placeholder",
+        "period": "2019 — 2021",
+        "location": "Hybride",
+        "description": "Contribution à des projets web clients, implémentation de composants UI et intégration de services tiers. Bases solides en qualité de code, tests et versioning."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Ouverte aux opportunités au Canada, en France, en Allemagne, au Royaume-Uni et aux États-Unis. Parlons de votre projet ou poste.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "whatsapp": "WhatsApp",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "vous@exemple.com",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-moi de votre projet, poste ou idée de collaboration…",
+      "submit": "Envoyer",
+      "success": "Merci ! Votre message a bien été reçu. Je vous répondrai rapidement.",
+      "nameRequired": "Le nom est requis",
+      "emailRequired": "L'email est requis",
+      "emailInvalid": "Veuillez entrer une adresse email valide",
+      "messageRequired": "Le message est requis"
+    }
+  },
+  "footer": {
+    "builtWith": "Construit avec Next.js, TypeScript & Tailwind CSS",
+    "rights": "Tous droits réservés.",
+    "navigation": "Navigation"
+  }
+}
