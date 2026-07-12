@@ -6,6 +6,7 @@ export const siteConfig = {
   whatsapp: "https://wa.me/237696565654",
   whatsappDisplay: "+237 696 565 654",
   resumeUrl: "/resume.pdf",
+  profilePhoto: "/profile/raisa-kouekam.jpg",
   url: "https://raisa-kouekam-portfolio.vercel.app",
 };
 

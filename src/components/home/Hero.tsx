@@ -1,6 +1,7 @@
 "use client";
 
 import { LinkButton } from "@/components/ui/LinkButton";
+import { ProfilePhoto } from "@/components/ui/ProfilePhoto";
 import { siteConfig } from "@/data/site";
 import { getResumeHref, getResumeLinkProps } from "@/lib/nav";
 import type { Locale } from "@/i18n/config";
@@ -103,13 +104,11 @@ export function Hero({ locale, dict }: HeroProps) {
             {...fadeUp(0.2)}
             className="order-2 flex justify-center lg:justify-end"
           >
-            <div
-              className="flex h-56 w-56 items-center justify-center rounded-full border border-border bg-light-gray text-5xl font-semibold tracking-tight text-[#2563EB] shadow-[0_8px_30px_rgba(15,23,42,0.06)] sm:h-64 sm:w-64 sm:text-6xl lg:h-72 lg:w-72"
-              role="img"
-              aria-label={dict.home.profilePhotoLabel}
-            >
-              RK
-            </div>
+            <ProfilePhoto
+              alt={dict.home.profilePhotoLabel}
+              variant="circle"
+              priority
+            />
           </motion.div>
         </div>
       </div>
