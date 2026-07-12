@@ -23,6 +23,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -31,6 +38,7 @@ body {
   font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
 }
 
 ::selection {
@@ -47,12 +55,6 @@ body {
   );
 }
 
-.glass {
-  background: color-mix(in srgb, white 80%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
 .card-shadow {
   box-shadow:
     0 1px 3px color-mix(in srgb, var(--dark) 4%, transparent),
@@ -63,29 +65,4 @@ body {
   box-shadow:
     0 4px 12px color-mix(in srgb, var(--dark) 6%, transparent),
     0 8px 32px color-mix(in srgb, var(--primary) 8%, transparent);
-}
-
-.hover-lift {
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.hover-lift:hover {
-  transform: translateY(-2px);
-}
-
-@keyframes gradient-shift {
-  0%,
-  100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 8s ease infinite;
 }

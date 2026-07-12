@@ -8,12 +8,14 @@ type Variant = keyof typeof buttonVariants;
 type LinkButtonProps = ComponentProps<typeof Link> & {
   variant?: Variant;
   external?: boolean;
+  download?: string;
 };
 
 export function LinkButton({
   variant = "primary",
   className,
   external,
+  download,
   ...props
 }: LinkButtonProps) {
   return (
@@ -24,6 +26,7 @@ export function LinkButton({
         className
       )}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      {...(download ? { download } : {})}
       {...props}
     />
   );

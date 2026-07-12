@@ -1,3 +1,4 @@
+import { JsonLd } from "@/components/seo/JsonLd";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/layout/Footer";
@@ -33,6 +34,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <>
+      <JsonLd locale={locale} description={dict.meta.description} />
       <SkipLink label={dict.meta.skipToContent} />
       <Navbar locale={locale as Locale} dict={dict} />
       <main id="main-content">{children}</main>

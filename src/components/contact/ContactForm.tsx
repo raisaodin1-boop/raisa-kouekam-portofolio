@@ -73,6 +73,8 @@ export function ContactForm({ dict }: ContactFormProps) {
               name="name"
               type="text"
               autoComplete="name"
+              required
+              aria-required="true"
               placeholder={dict.namePlaceholder}
               aria-invalid={!!errors.name}
               aria-describedby={errors.name ? "name-error" : undefined}
@@ -94,6 +96,9 @@ export function ContactForm({ dict }: ContactFormProps) {
               name="email"
               type="email"
               autoComplete="email"
+              inputMode="email"
+              required
+              aria-required="true"
               placeholder={dict.emailPlaceholder}
               aria-invalid={!!errors.email}
               aria-describedby={errors.email ? "email-error" : undefined}
@@ -114,6 +119,9 @@ export function ContactForm({ dict }: ContactFormProps) {
               id="subject"
               name="subject"
               type="text"
+              autoComplete="off"
+              required
+              aria-required="true"
               placeholder={dict.subjectPlaceholder}
               aria-invalid={!!errors.subject}
               aria-describedby={errors.subject ? "subject-error" : undefined}
@@ -134,6 +142,8 @@ export function ContactForm({ dict }: ContactFormProps) {
               id="message"
               name="message"
               rows={5}
+              required
+              aria-required="true"
               placeholder={dict.messagePlaceholder}
               aria-invalid={!!errors.message}
               aria-describedby={errors.message ? "message-error" : undefined}
@@ -150,6 +160,7 @@ export function ContactForm({ dict }: ContactFormProps) {
             <p
               className="rounded-xl border border-accent/20 bg-accent/10 px-4 py-3 text-sm text-dark"
               role="status"
+              aria-live="polite"
             >
               {dict.success}
             </p>

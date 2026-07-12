@@ -5,12 +5,16 @@ export const siteConfig = {
   linkedin: "https://www.linkedin.com/in/raisa-kouekam-37778a127",
   whatsapp: "https://wa.me/237696565654",
   whatsappDisplay: "+237 696 565 654",
-  resumeUrl: "",
+  resumeUrl: "/resume.pdf",
   url: "https://raisa-kouekam-portfolio.vercel.app",
 };
 
 export function isConfiguredUrl(url: string): boolean {
   return Boolean(url && url !== "#");
+}
+
+export function isExternalUrl(url: string): boolean {
+  return url.startsWith("http://") || url.startsWith("https://");
 }
 
 export const skillCategories = {
@@ -120,15 +124,6 @@ export const projectsData: Record<
 
 export { experienceKeys } from "./experience";
 export type { ExperienceKey } from "./experience";
-
-export const navItems = [
-  { key: "home", href: "" },
-  { key: "about", href: "/about" },
-  { key: "projects", href: "/projects" },
-  { key: "experience", href: "/experience" },
-  { key: "skills", href: "/skills" },
-  { key: "contact", href: "/contact" },
-] as const;
 
 export const navbarItems = [
   { key: "home", href: "" },
