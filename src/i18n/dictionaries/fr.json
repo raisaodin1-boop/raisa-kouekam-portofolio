@@ -17,7 +17,15 @@
   "home": {
     "greeting": "Ingénieure Full Stack",
     "name": "Raisa Kouekam",
-    "subtitle": "Je conçois des applications web évolutives, des plateformes e-commerce et des produits digitaux qui résolvent de vrais problèmes business.",
+    "subtitle": "Je conçois des applications web modernes, des plateformes e-commerce et des produits digitaux qui résolvent de vrais problèmes business.",
+    "badge": "Disponible pour des opportunités internationales",
+    "highlights": [
+      "Développement Full Stack",
+      "Solutions E-commerce",
+      "Applications Fintech",
+      "Logiciels métier"
+    ],
+    "scrollIndicator": "Faire défiler",
     "downloadResume": "Télécharger le CV",
     "viewProjects": "Voir les projets",
     "featuredTitle": "Projets sélectionnés",
