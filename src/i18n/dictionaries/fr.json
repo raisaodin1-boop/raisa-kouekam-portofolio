@@ -1,8 +1,21 @@
 {
   "meta": {
     "title": "Raisa Kouekam — Ingénieure Full Stack",
-    "description": "Ingénieure Full Stack spécialisée dans les applications web évolutives, les marketplaces e-commerce, les plateformes fintech et les produits digitaux pour des équipes internationales.",
+    "description": "Ingénieure Full Stack livrant des produits e-commerce et fintech en production (Yorix, HODIX). Bilingue EN/FR. Ouverte aux postes internationaux en remote.",
     "skipToContent": "Aller au contenu principal"
+  },
+  "a11y": {
+    "mainNavigation": "Navigation principale",
+    "languageSwitcher": "Sélecteur de langue",
+    "switchToEnglish": "Passer en anglais",
+    "switchToFrench": "Passer en français",
+    "contactForm": "Formulaire de contact",
+    "contactInformation": "Informations de contact",
+    "professionalHighlights": "Points forts professionnels",
+    "experienceTimeline": "Chronologie de l'expérience professionnelle",
+    "skillCategories": "Catégories de compétences",
+    "formErrorSummary": "Veuillez corriger les erreurs ci-dessous avant d'envoyer.",
+    "socialLinks": "Liens sociaux"
   },
   "nav": {
     "home": "Accueil",
@@ -17,31 +30,50 @@
   "home": {
     "greeting": "Ingénieure Full Stack",
     "name": "Raisa Kouekam",
-    "subtitle": "Je conçois des applications web évolutives, des plateformes e-commerce et des produits digitaux qui résolvent de vrais problèmes business.",
+    "subtitle": "Je conçois, développe et déploie des applications web en production — dont des marketplaces e-commerce et des plateformes fintech comme Yorix et HODIX — pour un impact business concret.",
     "badge": "Disponible pour des opportunités internationales",
     "highlights": [
       "Développement Full Stack",
-      "Solutions E-commerce",
+      "Plateformes E-commerce",
       "Applications Fintech",
-      "Logiciels métier"
+      "Livraison Production"
     ],
+    "metrics": [
+      {
+        "value": "3+",
+        "label": "Produits en production"
+      },
+      {
+        "value": "E-commerce & Fintech",
+        "label": "Domaines clés"
+      },
+      {
+        "value": "EN / FR",
+        "label": "Profil bilingue"
+      },
+      {
+        "value": "Remote",
+        "label": "Ouverte à l'international"
+      }
+    ],
+    "coreExpertise": "Expertise clé",
     "scrollIndicator": "Faire défiler",
     "downloadResume": "Télécharger le CV",
     "viewProjects": "Voir les projets",
     "featuredTitle": "Projets sélectionnés",
-    "featuredSubtitle": "Des produits récents — marketplaces, fintech et outils développeur — conçus pour la scalabilité et l'impact.",
+    "featuredSubtitle": "Produits en production — marketplaces, fintech et logiciels métier — conçus de bout en bout avec des technologies web modernes.",
     "viewAllProjects": "Voir tous les projets",
     "aboutTitle": "À propos",
-    "aboutText": "Je suis Ingénieure Full Stack, focalisée sur l'architecture propre, la performance et l'expérience utilisateur. Je collabore avec des équipes internationales pour livrer des produits fiables et prêts pour la production.",
+    "aboutText": "Ingénieure Full Stack et fondatrice de Yorix Digital Group. Je livre des systèmes en production — marketplaces, fintech et logiciels métier — de la conception UI à l'architecture et au déploiement.",
     "learnMore": "En savoir plus",
     "skillsTitle": "Expertise technique",
     "skillsSubtitle": "Un profil équilibré entre frontend, backend, cloud et outils.",
     "viewAllSkills": "Voir toutes les compétences",
     "experienceTitle": "Expérience professionnelle",
-    "experienceSubtitle": "Développement logiciel au sein de startups et d'équipes remote internationales.",
+    "experienceSubtitle": "Fondatrice et ingénieure livrant des produits réels — de l'architecture au déploiement en production.",
     "viewExperience": "Voir toute l'expérience",
     "contactTitle": "Travaillons ensemble",
-    "contactSubtitle": "Ouverte aux postes CDI et missions freelance au Canada, en France, en Allemagne, au Royaume-Uni et aux États-Unis.",
+    "contactSubtitle": "Ouverte aux postes CDI et missions freelance au Canada, en France, en Allemagne, au Royaume-Uni, aux États-Unis et en remote international.",
     "getInTouch": "Me contacter"
   },
   "about": {
@@ -51,7 +83,7 @@
     "paragraphs": [
       "Je suis Ingénieure Full Stack, passionnée par la création d'applications web modernes et de produits digitaux qui apportent une valeur concrète aux utilisateurs et aux entreprises.",
       "Je conçois des solutions complètes — des interfaces intuitives à une architecture backend robuste et une gestion réfléchie des bases de données — en veillant à ce que chaque couche fonctionne en harmonie.",
-      "Mon expérience inclut le développement de plateformes e-commerce, d'applications fintech et de logiciels de gestion d'entreprise, en transformant des exigences complexes en produits fiables et prêts pour la production.",
+      "Mon expérience inclut la mise en production de plateformes comme Yorix Marketplace et HODIX Fintech, ainsi que des logiciels métier internes — en transformant des exigences complexes en produits fiables.",
       "Je crois en l'apprentissage continu, à l'écriture de code propre, à la collaboration efficace au sein des équipes et à la construction de logiciels conçus pour créer de la valeur à long terme."
     ],
     "highlights": [
@@ -85,6 +117,7 @@
       "Docker"
     ],
     "portraitLabel": "Portrait professionnel de Raisa Kouekam — placeholder",
+    "portraitCaption": "Portrait",
     "values": {
       "title": "Valeurs",
       "items": [
@@ -96,8 +129,8 @@
     }
   },
   "skills": {
-    "title": "Compétences",
-    "subtitle": "Technologies et outils que j'utilise pour concevoir, développer et déployer des applications modernes prêtes pour la production.",
+    "title": "Compétences techniques",
+    "subtitle": "Technologies utilisées pour construire, déployer et maintenir des applications web en production — du frontend au backend et au cloud.",
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
@@ -165,20 +198,20 @@
     "achievementsTitle": "Réalisations clés",
     "achievements": [
       {
-        "value": "2+",
-        "label": "Produits digitaux créés"
+        "value": "3+",
+        "label": "Produits en production"
       },
       {
-        "value": "Full Stack",
-        "label": "Expérience en développement"
+        "value": "E-commerce & Fintech",
+        "label": "Expertise métier"
       },
       {
-        "value": "Modernes",
-        "label": "Technologies web"
+        "value": "EN / FR",
+        "label": "Livraison bilingue"
       },
       {
-        "value": "International",
-        "label": "Objectif de carrière"
+        "value": "Remote",
+        "label": "Ouverte à l'international"
       }
     ],
     "present": "Aujourd'hui",
@@ -285,7 +318,7 @@
       "message": "Message",
       "messagePlaceholder": "Parlez-moi de votre projet, poste ou idée de collaboration…",
       "submit": "Envoyer le message",
-      "success": "Merci ! Votre message a bien été reçu. Je vous répondrai rapidement.",
+      "success": "Merci ! Votre client email va s'ouvrir pour envoyer le message.",
       "nameRequired": "Le nom est requis",
       "emailRequired": "L'email est requis",
       "emailInvalid": "Veuillez entrer une adresse email valide",

@@ -12,4 +12,5 @@ export type AboutDictionary = {
   techStackLabel: string;
   techStack: string[];
   portraitLabel: string;
+  portraitCaption: string;
 };

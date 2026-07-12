@@ -9,9 +9,10 @@ import { Clock, Mail, MapPin } from "lucide-react";
 
 type ContactInfoProps = {
   dict: Pick<ContactDictionary, "intro" | "cards" | "social" | "socialLabel">;
+  contactInfoLabel: string;
 };
 
-export function ContactInfo({ dict }: ContactInfoProps) {
+export function ContactInfo({ dict, contactInfoLabel }: ContactInfoProps) {
   return (
     <AnimateIn direction="left" delay={0.1}>
       <div className="space-y-8">
@@ -19,30 +20,30 @@ export function ContactInfo({ dict }: ContactInfoProps) {
           {dict.intro}
         </p>
 
-        <div className="space-y-4" role="list" aria-label="Contact information">
-          <div role="listitem">
+        <ul className="space-y-4" aria-label={contactInfoLabel}>
+          <li>
             <ContactCard
               title={dict.cards.email.title}
               lines={[siteConfig.email]}
               icon={Mail}
               href={`mailto:${siteConfig.email}`}
             />
-          </div>
-          <div role="listitem">
+          </li>
+          <li>
             <ContactCard
               title={dict.cards.location.title}
               lines={dict.cards.location.lines}
               icon={MapPin}
             />
-          </div>
-          <div role="listitem">
+          </li>
+          <li>
             <ContactCard
               title={dict.cards.availability.title}
               lines={dict.cards.availability.lines}
               icon={Clock}
             />
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <ContactSocialLinks labels={dict.social} sectionLabel={dict.socialLabel} />
       </div>

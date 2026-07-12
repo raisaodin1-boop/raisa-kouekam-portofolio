@@ -30,9 +30,14 @@ const categoryConfig = [
 
 export function SkillsContent({ dict }: SkillsContentProps) {
   return (
-    <PageContainer>
+    <PageContainer as="section" aria-labelledby="skills-page-heading">
       <AnimateIn>
-        <SectionHeading title={dict.title} subtitle={dict.subtitle} />
+        <SectionHeading
+          title={dict.title}
+          subtitle={dict.subtitle}
+          level="h1"
+          headingId="skills-page-heading"
+        />
       </AnimateIn>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

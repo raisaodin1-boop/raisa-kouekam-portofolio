@@ -1,13 +1,16 @@
 "use client";
 
 import { Button } from "@/components/ui/Button";
+import { siteConfig } from "@/data/site";
 import type { ContactDictionary } from "@/components/contact/types";
 import { cn } from "@/lib/utils";
 import { AnimateIn } from "@/components/ui/AnimateIn";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 type ContactFormProps = {
   dict: ContactDictionary["form"];
+  errorSummaryLabel: string;
+  formAriaLabel: string;
 };
 
 type FormErrors = {
@@ -19,13 +22,22 @@ type FormErrors = {
 
 const inputClassName = (hasError: boolean) =>
   cn(
-    "mt-2 w-full rounded-xl border bg-light-gray/50 px-4 py-3 text-sm text-dark placeholder:text-muted/60 transition-colors focus:border-primary focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary/20",
+    "mt-2 w-full rounded-xl border bg-light-gray/50 px-4 py-3 text-sm text-dark placeholder:text-muted/60 transition-colors focus-visible:border-primary focus-visible:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20",
     hasError ? "border-red-400" : "border-border"
   );
 
-export function ContactForm({ dict }: ContactFormProps) {
+export function ContactForm({ dict, errorSummaryLabel, formAriaLabel }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const focusFirstError = (newErrors: FormErrors) => {
+    const order = ["name", "email", "subject", "message"] as const;
+    const firstKey = order.find((key) => newErrors[key]);
+    if (firstKey) {
+      formRef.current?.querySelector<HTMLElement>(`#${firstKey}`)?.focus();
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -47,23 +59,36 @@ export function ContactForm({ dict }: ContactFormProps) {
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       setSubmitted(false);
+      focusFirstError(newErrors);
       return;
     }
 
     setErrors({});
     setSubmitted(true);
     form.reset();
+
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    window.location.href = `mailto:${siteConfig.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
+
+  const hasErrors = Object.keys(errors).length > 0;
 
   return (
     <AnimateIn direction="right" delay={0.15}>
       <form
+        ref={formRef}
         onSubmit={handleSubmit}
         className="rounded-2xl border border-border bg-white p-6 card-shadow sm:p-8"
         noValidate
-        aria-label="Contact form"
+        aria-label={formAriaLabel}
       >
         <div className="space-y-5">
+          {hasErrors && (
+            <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">
+              {errorSummaryLabel}
+            </p>
+          )}
+
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-dark">
               {dict.name}

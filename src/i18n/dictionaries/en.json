@@ -1,8 +1,21 @@
 {
   "meta": {
     "title": "Raisa Kouekam — Full Stack Software Engineer",
-    "description": "Full Stack Software Engineer building scalable web applications, e-commerce marketplaces, fintech platforms and digital products for international teams.",
+    "description": "Full Stack Software Engineer shipping production e-commerce and fintech products (Yorix, HODIX). Bilingual EN/FR. Open to international remote roles.",
     "skipToContent": "Skip to main content"
+  },
+  "a11y": {
+    "mainNavigation": "Main navigation",
+    "languageSwitcher": "Language switcher",
+    "switchToEnglish": "Switch to English",
+    "switchToFrench": "Switch to French",
+    "contactForm": "Contact form",
+    "contactInformation": "Contact information",
+    "professionalHighlights": "Professional highlights",
+    "experienceTimeline": "Professional experience timeline",
+    "skillCategories": "Skill categories",
+    "formErrorSummary": "Please fix the errors below before submitting.",
+    "socialLinks": "Social links"
   },
   "nav": {
     "home": "Home",
@@ -17,31 +30,49 @@
   "home": {
     "greeting": "Full Stack Software Engineer",
     "name": "Raisa Kouekam",
-    "subtitle": "I build scalable web applications, e-commerce platforms and digital products that solve real business problems.",
+    "subtitle": "I design, build and ship production web applications — including e-commerce marketplaces and fintech platforms such as Yorix and HODIX — for real users and business impact.",
     "badge": "Available for International Opportunities",
     "highlights": [
       "Full Stack Development",
-      "E-commerce Solutions",
+      "E-commerce Platforms",
       "Fintech Applications",
-      "Business Software"
+      "Production-Ready Delivery"
     ],
-    "scrollIndicator": "Scroll to explore",
+    "metrics": [
+      {
+        "value": "3+",
+        "label": "Products in Production"
+      },
+      {
+        "value": "E-commerce & Fintech",
+        "label": "Core Domains"
+      },
+      {
+        "value": "EN / FR",
+        "label": "Bilingual Engineer"
+      },
+      {
+        "value": "Remote",
+        "label": "International Ready"
+      }
+    ],
+    "coreExpertise": "Core expertise",
     "downloadResume": "Download Resume",
     "viewProjects": "View Projects",
     "featuredTitle": "Selected Work",
-    "featuredSubtitle": "Recent products spanning marketplaces, fintech and developer tooling — built for scale and real-world impact.",
+    "featuredSubtitle": "Live production products — marketplaces, fintech and business software — built end-to-end with modern web technologies.",
     "viewAllProjects": "View all projects",
     "aboutTitle": "About Me",
-    "aboutText": "I'm a Full Stack Software Engineer with a focus on clean architecture, performance and user experience. I partner with international teams to ship products that are reliable, maintainable and ready for production.",
+    "aboutText": "Full Stack Engineer and founder at Yorix Digital Group. I deliver production systems across marketplaces, fintech and business software — from system design and UI to deployment and maintenance.",
     "learnMore": "Learn more",
     "skillsTitle": "Technical Expertise",
     "skillsSubtitle": "A balanced skill set across frontend, backend, cloud and tooling.",
     "viewAllSkills": "View all skills",
     "experienceTitle": "Professional Experience",
-    "experienceSubtitle": "Building software across startups and international remote teams.",
+    "experienceSubtitle": "Founder and engineer shipping real products — from architecture and development to production deployment.",
     "viewExperience": "View full experience",
     "contactTitle": "Let's Work Together",
-    "contactSubtitle": "Open to full-time roles and contract opportunities across Canada, France, Germany, the UK and the US.",
+    "contactSubtitle": "Open to full-time and contract roles across Canada, France, Germany, the UK, the US and remote international teams.",
     "getInTouch": "Get in touch"
   },
   "about": {
@@ -51,7 +82,7 @@
     "paragraphs": [
       "I'm a Full Stack Software Engineer passionate about building modern web applications and digital products that create meaningful value for users and businesses.",
       "I design complete solutions — from intuitive user interfaces to robust backend architecture and thoughtful database management — ensuring every layer works together seamlessly.",
-      "My experience includes developing e-commerce platforms, fintech applications and business management software, turning complex requirements into reliable, production-ready products.",
+      "My experience includes shipping production platforms such as Yorix Marketplace and HODIX Fintech, plus internal business software — turning complex requirements into reliable, user-facing products.",
       "I believe in continuous learning, writing clean code, collaborating effectively with teams and building software designed to deliver long-term value."
     ],
     "highlights": [
@@ -85,6 +116,7 @@
       "Docker"
     ],
     "portraitLabel": "Raisa Kouekam professional portrait placeholder",
+    "portraitCaption": "Portrait",
     "values": {
       "title": "Core Values",
       "items": [
@@ -96,8 +128,8 @@
     }
   },
   "skills": {
-    "title": "Skills",
-    "subtitle": "Technologies and tools I use to design, build and deploy modern, production-ready applications.",
+    "title": "Technical Skills",
+    "subtitle": "Technologies used to build, deploy and maintain production web applications — from UI to backend and cloud.",
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
@@ -165,20 +197,20 @@
     "achievementsTitle": "Key Achievements",
     "achievements": [
       {
-        "value": "2+",
-        "label": "Digital Products Built"
+        "value": "3+",
+        "label": "Products in Production"
       },
       {
-        "value": "Full Stack",
-        "label": "Development Experience"
+        "value": "E-commerce & Fintech",
+        "label": "Domain Expertise"
       },
       {
-        "value": "Modern",
-        "label": "Web Technologies"
+        "value": "EN / FR",
+        "label": "Bilingual Delivery"
       },
       {
-        "value": "International",
-        "label": "Career Goal"
+        "value": "Remote",
+        "label": "International Ready"
       }
     ],
     "present": "Present",
@@ -285,7 +317,7 @@
       "message": "Message",
       "messagePlaceholder": "Tell me about your project, role or collaboration idea…",
       "submit": "Send Message",
-      "success": "Thank you! Your message has been received. I'll get back to you soon.",
+      "success": "Thank you! Your email client will open so you can send the message.",
       "nameRequired": "Name is required",
       "emailRequired": "Email is required",
       "emailInvalid": "Please enter a valid email address",

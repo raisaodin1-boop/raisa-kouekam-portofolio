@@ -5,6 +5,8 @@ type SectionHeadingProps = {
   subtitle?: string;
   className?: string;
   align?: "left" | "center";
+  level?: "h1" | "h2";
+  headingId?: string;
 };
 
 export function SectionHeading({
@@ -12,7 +14,11 @@ export function SectionHeading({
   subtitle,
   className,
   align = "left",
+  level = "h2",
+  headingId,
 }: SectionHeadingProps) {
+  const Heading = level;
+
   return (
     <div
       className={cn(
@@ -21,9 +27,12 @@ export function SectionHeading({
         className
       )}
     >
-      <h2 className="text-3xl font-bold tracking-tight text-dark sm:text-4xl lg:text-[2.5rem] lg:leading-tight">
+      <Heading
+        id={headingId}
+        className="text-3xl font-bold tracking-tight text-dark sm:text-4xl lg:text-[2.5rem] lg:leading-tight"
+      >
         {title}
-      </h2>
+      </Heading>
       {subtitle && (
         <p className="mt-4 text-base leading-relaxed text-muted sm:text-lg">
           {subtitle}
